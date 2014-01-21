@@ -57,27 +57,26 @@ $(document).ready(function() {
 	</script>
 </head>
 <body>
-
 	<h3 id="assignment_header">Assignment</h3>
-<br>
-        	<form id="begin" action="/create/begin" method="post">
-        		<p>
-        			STUDENT NAME:  <input tabindex="1" id="student_name" name="student_name" class="span3" type="text" style="color:#000000" />
-        		</p>
+	<br>
+	<form id="begin" action="/create/begin" method="post">
+		<p>
+			STUDENT NAME:<input tabindex="1" id="student_name" name="student_name" class="span3" type="text" style="color:#000000" />
+		</p>
 
-				<h5>OBJECTIVE</h5>
-				<p><textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
+		<h5>OBJECTIVE</h5>
+		<p><textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
 
-				<h5>STEPS</h5>
-				<?php foreach ($steps as $step) { ?>
-				<p><input id="step" class="span9" tabindex="3" type="text" readonly value="<?php echo $step->step;?>" /></p>
-				<?php } ?>
-				<input type="hidden" value="<?php echo $synopsis_url?>" name="synopsis_url">
-				<input type="hidden" value="<?php echo $synopsis_id;?>" name="synopsis_id">
-				<input type="hidden" value="<?php echo $assignment_id;?>" name="assignment_id">
-				<p><button tabindex="2" class="btn btn-icon btn-primary glyphicons lightbulb" type="submit" value="Assign"><i></i>Begin</button></p>
-			</form>
-
+		<h5>STEPS</h5>
+		<?php foreach ($steps as $step) { ?>
+		<p><input id="step" class="span9" tabindex="3" type="text" readonly value="<?php echo $step->step;?>" /></p>
+		<?php } ?>
+		<input type="hidden" value="<?php echo $synopsis_url?>" name="synopsis_url">
+		<input type="hidden" value="<?php echo $synopsis_id;?>" name="synopsis_id">
+		<input type="hidden" value="<?php echo $assignment_id;?>" name="assignment_id">
+		<br>
+		<p><button tabindex="2" class="btn btn-icon btn-primary glyphicons lightbulb" type="submit" value="Assign"><i></i>Begin</button></p>
+	</form>
 	<hr>
 <div id="x">
 	<?php //$this->load->view('/components/footer') ?>

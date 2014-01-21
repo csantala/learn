@@ -16,7 +16,9 @@ $(document).ready(function() {
 
        $(".notes").click(function(e) {
         e.preventDefault();
-          var n = $(this).data("n");
-         $('<p><textarea name="note'+n+'" placeholder="notes"></textarea>').insertAfter($(this));
+         $(this).attr('notes', '');
+         var n = $(this).data("n");
+         $(this).html('<p><textarea name="note'+n+'" placeholder="notes"></textarea>');
+         $(this).unbind('click');
     });
 });

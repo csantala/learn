@@ -97,7 +97,6 @@ $(document).ready(function () {
 		<a tabindex="100" id="submit" class="btn btn-icon btn-primary glyphicons parents"><i></i>Create Assignment</a>
 		</p>
 	</form>
-
 		<br>
 	<hr>
 <div id="getlost">

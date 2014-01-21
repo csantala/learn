@@ -77,7 +77,7 @@
 				<?php }
 			?>
 		</p>
-
+<br>
 		<h4 id="progress">Progress&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $progress_tip;?>">?</a></h4>
 
 		  <table id="scanner_data">

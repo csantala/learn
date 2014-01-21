@@ -118,6 +118,7 @@ input {
 
 #scanner_data {
 	width:100%;
+	color:#000000;
 }
 
 .scanner_cell {
@@ -136,6 +137,10 @@ input {
 	border-bottom: 1px solid #d8d8d8;
 }
 
+#student_name_container {
+	float:left;
+	text-align:left;
+}
 
 #objective {
 	color:#000000;
@@ -148,8 +153,12 @@ input {
     height:100px;
 }
 
+.steps{
+	color:#000000;
+}
+
 .step_number {
-	padding-bottom:10px;
+	#padding-bottom:0px;
 	color:#000000;
 }
 
@@ -191,4 +200,8 @@ input {
 	color:#000000;
 	width:500px;
 	height:100px;
+}
+
+#done {
+	text-align:right;
 }

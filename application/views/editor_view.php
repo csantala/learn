@@ -1,6 +1,6 @@
 <?php
 	date_default_timezone_set($timezone);
-	$synopsis_tip = "Document each task you take to complete the assignment in the editor below.  Use a new line for each task, submit when complete. Bookmark this page to work on your synopsis in the future.";
+	$synopsis_tip = "Click each checkbox for each completed step. Document your tasks in the notes fields.";
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -49,12 +49,14 @@
 </head>
 <body>
 		<h3 id="assignment_header">Synopsis&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip?>">?</a></h3>
+		<div id="student_name_container">
+			<p>
+			<h5>STUDENT</h5>
+        	<input id="student_name" value=" <?php echo $student_name; ?>" name="student_name" class="span3 student_name" type="text" readonly style="color:#000000" />
+     	   </p>
+        <div>
 		<br>
         	<form id="begin" action="/generate/generate_report" method="post">
-        		<p>
-        			STUDENT: <input id="student_name" value="<?php echo $student_name; ?>" name="student_name" class="span3" type="text" readonly style="color:#000000" />
-        		</p>
-
 				<h5>OBJECTIVE</h5>
 				<p><textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
 
@@ -66,7 +68,7 @@
 							<?php echo $s;?>.
 						</td>
 						<td>
-							<span class="row<?php echo $s;?>"><input id="step"  class="span9" tabindex="" type="text" readonly value="<?php echo $step->step;?>" />&nbsp;
+							<span class="row<?php echo $s;?>"><input id="step" class="span7 steps" tabindex="" type="text" readonly value="<?php echo $step->step;?>" style="color:#000;" />&nbsp;
 						</td>
 						<td class="checkbox">
 							<a class="glyphicons unchecked begin begin<?php echo $s;?>" data-s="<?php echo $s;?>"><i></i></a></span>
@@ -76,21 +78,19 @@
 						<td>
 						</td>
 						<td>
-							<input type="text" class="notes" data-n="<?php echo $s;?>" placeholder="notes">
+							<div class="notes"><input type="text" data-n="<?php echo $s;?>" placeholder="notes"></div>
 						</td>
 					</tr>
 					<tr><td colspan="2">&nbsp;</td></tr>
 				<?php $s++; } ?>
-</table>
+				</table>
 		        <div class="row-fluid">
-
-        		<div id="done">
-        			<input type="hidden" name="pid" value="<?php echo $project_id;?>">
-        			<input type="hidden" name="aid" value="<?php echo $assignment_hash;?>">
-        			<input type="submit" value="SUBMIT ASSIGNMENT">
-        			<!-- a class="btn primary confirm" href="/generate/generate_report/<?php echo $project_id?>/<?php echo $assignment_hash?>"SUBMIT ASSIGNMENT</a--></form>
-        		</div>
-
+	        		<div id="done">
+	        			<input type="hidden" name="pid" value="<?php echo $project_id;?>">
+	        			<input type="hidden" name="aid" value="<?php echo $assignment_hash;?>">
+	        			<input type="submit" class="btn btn-default primary" value="     SUBMIT ASSIGNMENT     ">
+	        			<!-- a class="btn primary confirm" href="/generate/generate_report/<?php echo $project_id?>/<?php echo $assignment_hash?>"SUBMIT ASSIGNMENT</a--></form>
+	        		</div>
 		        </div>
 <div id="getlost">
         <?php // $this->load->view('/components/footer') ?>
