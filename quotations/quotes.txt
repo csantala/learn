@@ -1,0 +1,743 @@
+"I have never in my life learned anything from any man who agreed with me. - Dudley Field Malone"
+
+"The trouble with not having a goal is that you can spend your life running up and down the field and never score. - Bill Copeland"
+
+"It is never too late to be what you might have been. - George Eliot"
+
+"All our dreams can come true - if we have the courage to pursue them. - Walt Disney"
+
+"Great minds discuss ideas. Average minds discuss events. Small minds discuss people. - Eleanor Roosevelt"
+
+"If opportunity doesn't knock, build a door. - Milton Berle"
+
+"An eye for eye only ends up making the whole world blind. - M.K. Gandhi"
+
+"Ask not what your country can do for you ó ask what you can do for your country. - John F. Kennedy"
+
+"I haven't failed. I've just found 10,000 ways that won't work. - Thomas Edison"
+
+"It is the mark of an educated mind to be able to entertain a thought without accepting it. - Aristotle"
+
+"It wasn't raining when Noah built the ark. - Howard Ruff"
+
+"It 's not whether you get knocked down, it's whether you get up. - Vince Lombardi"
+
+"Keep your friends close and your enemies closer. - Sun-Tzu"
+
+"Logic will get you from A to B. Imagination will take you everywhere. - Albert Einstein"
+
+"Never leave that till tomorrow which you can do today. - Benjamin Franklin"
+
+"Be not afraid of greatness. Some are born great, some achieve greatness, and some have greatness thrust upon them. - William Shakespeare"
+
+"That which doesn't kill us makes us stronger. - Friedrich Nietzsche"
+
+"The quickest way to double your money is to fold it over and put it back in your pocket. - Will Rogers"
+
+"Even if you're on the right track, you'll get run over if you just sit there. - Will Rogers"
+
+"To be prepared for war is one of the most effective means of preserving peace. - George Washington"
+
+"When you come to the end of your rope, tie a knot and hang on. - Franklin D. Roosevelt"
+
+"Do not worry if you have built your castles in the air. They are where they should be. Now put the foundations under them. - Henry David Thoreau"
+
+"What lies behind us and what lies before us are tiny matters compared to what lies within us. - Ralph Waldo Emerson"
+
+"What you do speaks so loudly that I cannot hear what you say. - Ralph Waldo Emerson"
+
+"I think and think for months and years. Ninety-nine times, the conclusion is false. The hundredth time I am right. - Albert Einstein"
+
+"Few are those who see with their own eyes and feel with their own hearts. - Albert Einstein"
+
+"Age is an issue of mind over matter. If you don't mind, it doesn't matter. - Mark Twain"
+
+"People who are crazy enough to think they can change the world, are the ones who do. - Apple Computers"
+
+"You must be the change you want to see in the world. - M.K. Gandhi"
+
+"If you want to test your memory, try to recall what you were worrying about one year ago today. - E. Joseph Cossman"
+
+"Whether you think you can or think you can't, you're right. - Henry Ford"
+
+"Failure is the condiment that gives success its flavor. - Truman Capote"
+
+"Remember that happiness is a way of travel, not a destination. - Roy Goodman"
+
+"In between goals is a thing called life, that has to be lived and enjoyed. - Sid Caesar"
+
+"The more I want to get something done, the less I call it work. - Richard Bach"
+
+"The only thing worse than a man you can't control is a man you can. - Margo Kaufman"
+
+"To avoid criticism do nothing, say nothing, be nothing. - Elbert Hubbard"
+
+"We see things not as they are, but as we are. - H. M. Tomlinson"
+
+"The man who removes a mountain begins by carrying away small stones. - Chinese Proverb"
+
+"Vision without action is daydream. Action without vision is nightmare. - Japanese Proverb"
+
+"If you keep saying things are going to be bad, you have a chance of being a prophet. - Isaac B. Singer"
+
+"The difference between ordinary and extraordinary is that little extra. - Jimmy Johnson"
+
+"When I hear somebody sigh, 'Life is hard,' I am always tempted to ask, Compared to what?' - Sydney Harris"
+
+"The only people who find what they are looking for in life are the fault finders. - Foster's Law"
+
+"I am an optimist. It does not seem too much use being anything else. - Winston Churchill"
+
+"If you're going through hell, keep going. - Winston Churchill"
+
+"Life is a shipwreck but we must not forget to sing in the lifeboats. - Voltaire"
+
+"The best way to predict the future is to create it. - Abraham Lincoln"
+
+"Don't go through life, grow through life. - Eric Butterworth"
+
+"Positive anything is better than negative thinking. - Elbert Hubbard"
+
+"Do not wait to strike till the iron is hot; but make it hot by striking. - William B. Sprague"
+
+"Great spirits have always encountered violent opposition from mediocre minds. - Albert Einstein"
+
+"I know for sure that what we dwell on is who we become. - Oprah Winfrey"
+
+"In any situation, the best thing you can do is the right thing; the next best thing you can do is the wrong thing; the worst thing you can do is nothing. - Theodore Roosevelt"
+
+"Keep on going and the chances are you will stumble on something, perhaps when you are least expecting it. I have never heard of anyone stumbling on something sitting down. - Charles F. Kettering"
+
+"There are two primary choices in life: to accept conditions as they exist, or accept the responsibility for changing them. - Dr. Denis Waitley"
+
+"Do not let what you cannot do interfere with what you can do. - John Wooden"
+
+"Cause change and lead; accept change and survive; resist change and die. - Ray Norda"
+
+"Defeat is not bitter unless you swallow it. - Joe Clark"
+
+"Don't let life discourage you; everyone who got where he is had to begin where he was. - Richard L. Evans"
+
+"A mind is like a parachute, it doesn't work if it isn't open. - Frank Zappa" 
+
+"If you want to make your dreams come true, the first thing you have to do is wake up. - J.M. Power"
+
+"In matters of style, swim with the current; in matters of principle, stand like a rock. - Thomas Jefferson"
+
+"Life is 10% what happens to us and 90% how we react to it. - Dennis P. Kimbro"
+
+"Winners lose much more often than losers. So if you keep losing but you're still trying, keep it up! You're right on track. - Matthew Keith Groves"
+
+"An obstacle is often a stepping stone. - Prescott"
+
+"The only thing worse than being blind is having sight but no vision. - Helen Keller"
+
+"The real opportunity for success lies within the person and not in the job. - Zig Ziglar"
+
+"If you cannot do great things, do small things in a great way. - Napoleon Hill"
+
+"Luck is a dividend of sweat. The more you sweat, the luckier you get. - Ray Kroc"
+
+"Perfection is not attainable, but if we chase perfection we can catch excellence. - Vince Lombardi"
+
+"People often say that motivation doesn't last. Well, neither does bathing - that's why we recommend it daily. - Zig Ziglar"
+
+"If not us, who? If not now, when? - John F. Kennedy"
+
+"Be more concerned with your character than with your reputation. Your character is what you really are while your reputation is merely what others think you are. - Dale Carnegie"
+
+"The elevator to success is out of order. You'll have to use the stairsÖ one step at a time. - Joe Girard"
+
+"Some men see things as they are and say why - I dream things that never were and say why not. - George Bernard Shaw"
+
+"A successful man is one who can lay a firm foundation with the bricks that others throw at him. - Sidney Greenberg"
+
+"I don't know the key to success, but the key to failure is trying to please everybody. - Bill Cosby"
+
+"The man who has confidence in himself gains the confidence of others. - Hasidic Proverb"
+
+"Management is doing things right; leadership is doing the right things. - Peter F. Drucker"
+
+"You miss 100% of the shots you don't take. - Wayne Gretzky"
+
+"Be who you are and say what you feel, because those who mind don't matter and those who matter don't mind. - Dr. Seuss"
+
+"I am always doing that which I cannot do, in order that I may learn how to do it. - Pablo Picasso"
+
+"Do not go where the path may lead, go instead where there is no path and leave a trail. - Ralph Waldo Emerson"
+
+"Enjoy the little things, for one day you may look back and realize they were the big things. - Robert Brault"
+
+"Not everything that can be counted counts, and not everything that counts can be counted. - Albert Einstein"
+
+"By failing to prepare, you are preparing to fail. - Benjamin Franklin"
+
+"Many of life's failures are experienced by people who did not realize how close they were to success when they gave up. - Thomas Edison"
+
+"Choose a job you love, and you will never have to work a day in your life. - Confucius"
+
+"The pessimist sees difficulty in every opportunity. The optimist sees the opportunity in every difficulty. - Winston Churchill"
+
+"The only way to have a friend is to be one. - Ralph Waldo Emerson"
+
+"Great thoughts speak only to the thoughtful mind, but great actions speak to all mankind. - Theodore Roosevelt"
+
+"You make a living by what you earn; you make a life by what you give. - Winston Churchill"
+
+"The journey of a thousand miles begins with one step. - Lao Tzu"
+
+"What counts is not necessarily the size of the dog in the fight - it's the size of the fight in the dog. - Dwight D. Eisenhower"
+
+"Keep away from people who try to belittle your ambitions. Small people always do that, but the really great makes you feel that you, too, can become great. - Mark Twain"
+
+"Every truth passes through three stages before it is recognized. In the first, it is ridiculed. In the second, it is opposed. In the third, it is regarded as self evident. - Arthur Schopenhauer"
+
+"Great performers are preparing and practicing for a winning day while everyone else is still asleep"
+
+"Vacation is the key to ideation"
+
+"Today could be the beginning of a whole new way to lead-and live. Make the choice. Start small. Dream big."
+
+"Doing what you've been resisting is how you become even better"
+
+"Leadership is the capacity to translate vision into reality. -Warren G. Bennis"
+
+"Be like a postage stamp. Stick to one thing until you get there. -Josh Billings"
+
+"Too many people overvalue what they are not and undervalue what they are. - Malcolm Forbes"
+
+"Determine that the thing can and shall be done, and then we shall find the way. -Abraham Lincoln"
+
+"Constant effort and frequent mistakes are the stepping stones to genius. - Elbert Hubbard"
+
+"Victims make excuses. Leaders drive results."
+
+"If you do build a great experience, customers tell each other about that. Word of mouth is very powerful. - Jeff Bezos"
+
+"I always tried to turn every disaster into an opportunity." -John D. Rockefeller
+
+"Your chances of success are directly proportional to the degree of pleasure you derive from what you do. - Michael Korda"
+
+"Making others feel really good about themselves begins with feeling really good about yourself"
+
+"Actions are seeds of fate. Seeds grow into destiny. - Harry Truman"
+
+"How can you cross new bridges if you're not willing to burn old ones?"
+
+"View your work as a craft and your life as an art"
+
+"I have a lot of things to prove to myself. One is that I can live my life fearlessly. - Oprah Winfrey"
+
+"If you're interested in balancing work and pleasure, stop trying to balance them. Instead make your work more pleasurable.- Donald Trump"
+
+"I attribute my success to this: I never gave or took an excuse."
+
+"If you try to be all things to everyone you'll end up nothing to anyone"
+
+"You must do the thing you think you cannot do. - Eleanor Roosevelt"
+
+"There is no passion to be found in playing small - in settling for a life that is less than what you are capable of living. - Nelson Mandela"
+
+"Don't judge each day by the harvest you reap, but by the seeds you plant. - Robert Louis Stevenson"
+
+"I've failed over and over and over again in my life and that is why I succeed. - Michael Jordan"
+
+"Your reputation should be your most respected asset. Build it with care and manage it with devotion."
+
+"I want to put a ding in the universe. - Steve Jobs"
+
+"Difficulties strengthen the mind, as labor does the body. - Seneca"
+
+"No great person survived without great dreams."
+
+"Congratulate yourself if you have done something strange, extravagant and broken the monotony. - Ralph Waldo Emerson"
+
+"Nurture your mind with great thoughts for you will never go any higher than you think. - Benjamin Disraeli"
+
+"Success is a dangerous place to be. why? because there it becomes easy to stop doing the very things that got you there"
+
+"An investment in knowledge pays the best interest. - Benjamin Franklin"
+
+"My heroes are the ones who survived doing it wrong, who made mistakes, but recovered from them. - Bono"
+
+"Shedding any addiction to excuse-making is the first step to legacy-building...and breaking out into leadership"
+
+"The longer you tolerate any form of mediocrity, the more it becomes acceptable to you"
+
+"First say to yourself what you would be; and then do what you have to do. - Epictetus"
+
+"To climb steep hills requires a slow pace at first. - Shakespeare"
+
+"Discontent is the first necessity of progress. - Thomas Edison"
+
+"Success is sweet: the sweeter if long delayed and attained through manifold struggles and defeats. - A. Branson Alcott"
+
+"Your premium brand had better be delivering something special, or it's not going to get the business. - Warren Buffett"
+
+"The greatest pleasure in life is in doing what people say you cannot do. - Walther Bageholt"
+
+"Knowledge has to be improved, challenged, and increased constantly, or it vanishes. - Peter Drucker"
+
+"Along with success comes a reputation for wisdom. - Euripides"
+
+"It's not what we profess but what we practice that gives us integrity. - Francis Bacon"
+
+"There are no ordinary people. Just people choosing to play at ordinary."
+
+"Great works are performed, not by strength, but perseverance - Samuel Johnson"
+
+"Whatever your mind can conceive and believe, it can achieve - Napoleon Hill"
+
+"My father was the best person i've ever known. - Warren Buffett"
+
+"Real leaders elegantly balance being fiercely courageous with being deeply compassionate"
+
+"People who need to tell everyone how great they are don't know how great they truly are"
+
+"The harder the conflict, the more glorious the triumph - Thomas Paine"
+
+"You need to overcome the tug of people against you as you reach for high goals. - George Patton"
+
+"Experience is not what happens to you; it's what you do with what happens to you. - Aldous Huxley"
+
+"Change is the law of life. And those who look only to the past or present are certain to miss the future. - John F. Kennedy"
+
+"Leadership is having a point of view. - Roger Enrico"
+
+"One of the best leadership moves I've ever made? Learning the value of getting up at 5 am. Changes the Game."
+
+"You don't own the things that you fear you can't live without. They own you."
+
+"To be prepared is half the victory. - Miguel de Cervantes"
+
+"Failure is the opportunity to begin again, more intelligently. - Henry Ford"
+
+"Life is a succession of lessons which must be lived to be understood. - Ralph Waldo Emerson"
+
+"The guys that improve every year are those that are always adding something to their game. - NBA star Steve Nash"
+
+"A leader has the vision and conviction that a dream can be achieved. He inspires the power and energy to get it done. - Ralph Nader"
+
+"The greatest glory in living lies not in never falling, but in rising every time we fall. - Nelson Mandela"
+
+"The important thing is not to stop questioning. Curiosity has its own reason for existing. - Albert Einstein"
+
+"I would rather lose in a cause that will some day win, than win in a cause that will some day lose! - Woodrow Wilson"
+
+"Spotting talent is one of the essential elements of great leadership. - David McCullough"
+
+"It's hard to lead a cavalry charge if you think you look funny on a horse. - Adlai Stevenson"
+
+"You're faced with a choice today: play the victim or become a virtuoso"
+
+"There are two ways of meeting difficulties; you alter the difficulties or you alter yourself to meet them. - Phyllis Bottome"
+
+"Watch, listen, and learn. You can't know it all yourself.. anyone who thinks they do is destined for mediocrity. - Donald Trump"
+
+"The real secret of the best leaders? Value generation vs. Ego gratification."
+
+"Your title/net worth/position doesn't matter! Anyone can show leadership-and influence by a brilliant example"
+
+"If one is lucky, a solitary fantasty can transform one million realities. - Maya Angelou"
+
+"The winner is the chef who takes the same ingredients as everyone else and produces the best results. - Edward de Bono"
+
+"The successful person makes a habit of doing what the failing person doesn't like to do. - Thomas Edison"
+
+"Try to learn something about everything and everything about something. - Thomas Huxley"
+
+"Leadership and learning are indispensable to each other. - John F. Kennedy"
+
+"One of the simplest of all human phenomema: take good care of others and they'll take good care of you"
+
+"He who serves the best profits the most - Ted Turner"
+
+"Leadership should be born out of the understanding of the needs of those who would be affected by it. - Marian Anderson"
+
+"Sometimes leadership is planting trees under whose shade you'll never sit. - Jennifer Granholm"
+
+"Character is the foundation of all worthwhile success. -John Hays Hammond"
+
+"All things are difficult before they are easy. -Thomas Fuller"
+
+"The only justification for ever looking down on someone is to lift them up. - Jesse Jackson"
+
+"It is in changing that things find purpose. - Heraclitus"
+
+"Treat people as if they were what they ought to be and help them become what they are capable of being. - Goethe"
+
+"If you're doing something a certain way because it's always been done that way, then you're probably doing it wrong. - Colin Baden"
+
+"I can accept failure, everyone fails at something. But I can't accept not trying. - Michael Jordan"
+
+"That Emerson quote I just tweeted is one of the most important quotes I'll ever share. Go deep into it, and all it's layers"
+
+"The great man is he who in the midst of the crowd keeps with perfect sweetness the independence of solitude. - Emerson"
+
+"A pessimist sees the difficulty in every opportunity; an optimist sees the opportunity in every difficulty. - Winston Churchill"
+
+"When you are through changing, you are through. - Bruce Barton"
+
+"I start with the premise that the function of leadership is to produce more leaders, not more followers. - Ralph Nader."
+
+"Unless commitment is made, there are only promises and hopes... but no plans. - Peter Drucker"
+
+"I don't look to jump over 7-foot bars: I look around for 1-foot bars that I can step over. - Warren Buffett" 
+
+"Life is a beautiful journey. Do not be so busy rushing to the mountaintop that you miss out on the glorious views along the way." 
+
+"Leadership is about closing the gap between where you now are and where you've always dreamed of being" 
+
+"Finish each day and be done with it. You have done what you could. Learn from it... tomorrow is a new day. - Ralph Waldo Emerson"
+
+"Your fears are nothing more than your growth coming to get you."
+
+"Good people are good because they've come to wisdom through failure. - William Saroyan" -
+
+"The worst prison would be a closed heart. - Pope John Paul II"
+
+"When you have to make a choice and don't make it, that is in itself a choice. - William James"
+
+"Elite performers consistently work towards physical mastery. When you feel good, you can do good."
+
+"The danger of success is that it becomes easy to fall in love with the winning formula that made you successful-so you stop innovating."
+
+"True grit is making a decision and standing by it, doing what must be done. - John Wayne"
+
+"A wise man will make more opportunities than he finds. - Francis Bacon"
+
+"People who feel good about the work they do, do great work."
+
+"You can't build a reputation on what you're going to do. - Henry Ford"
+
+"Life is short and the time to walk out into the world and be your highest self is now."
+
+"If everyone was satisfied with themselves, there would be no heroes. - Mark Twain"
+
+"Great leaders are great dreamers."
+
+"You have to be willing to make a fool of yourself to make art. - Bono"
+
+"A determined person doesn't find it hard to succeed; they find it hard to stop trying. - Allen Steble"
+
+"For every disadvantage there is a corresponding advantage. - W. Clement Stone"
+
+"Self investment is where a life of personal and professional mastery all begins. Success on the outside begins with success on the inside."
+
+"The world is changing very fast. Big will not beat small anymore. It will be the fast beating the slow.- Rupert Murdoch" 
+
+"I always tried to turn every disaster into an opportunity. - John D. Rockefeller" 
+
+"World peace begins with inner peace. - Dalai Lama"
+
+"The most effective performers in business know that an essential part of their job is to elevating the people around them."
+
+"A man who wants to lead the orchestra must turn his back on the crowd. -James Crooks"
+
+"It's the negative feedback that we don't hear that most limits us."
+
+"Interesting how we see more of what we most wish to learn about. And how life sends us what we most seek out"
+
+"Do what you can, with what you have, where you are. - Theodore Roosevelt"
+
+"The words you use are gateways into your best life."
+
+"Accept the challenges so that you may feel the exhilaration of victory. - George Patton"
+
+"The secret of passion? A breathtaking mission."
+
+"The more you read in your life, the more you will lead in your life."
+
+"Success is not final, failure is not fatal: it is the courage to continue that counts. - Winston Churchill"
+
+"It is amazing what you can accomplish if you do not care who gets the credit. - Harry Truman"
+
+"The man who dies rich dies disgraced. - Andrew Carnegie"
+
+"One of the greatest enemies of peak performance? Distractions."
+
+"The smallest of actions is better than the noblest of intentions" 
+
+"To dis-honor your commitments is to dishonor yourself"
+
+"Personal greatness is your birthright. You will find it on the other side of your resistances."
+
+"A stumbling block to the pessimist is a stepping stone to the optimist. - Eleanor Roosevelt"
+
+"I have not failed. I've just found 10,000 ways that won't work. - Thomas Edison"
+
+"To be a great champion you must believe you are the best. If you're not, pretend you are. -Muhammad Ali"
+
+"Success is the good fortune that comes from aspiration, desperation, perspiration and inspiration. - Evan Esar"
+
+"NSI. Never stop improving. Please remember that nothing fails like success. And the top of one mountain reveals other peaks to scale."
+
+"The first step to change is taking the first step"
+
+"Success is achieved and maintained by those who try and keep trying. - W. Clement Stone"
+
+"Don't run away from your fears. Run towards your fears. An extraordinary life will follow."
+
+"High expectations are the key to everything. - Sam Walton"
+
+"The difference in winning and losing is most often... not quitting. - Walt Disney"
+
+"Those who criticize and ridicule you can serve to strengthen and ignite you. Bless your critics."
+
+"Leadership isn't a popularity contest"
+
+"To live greatly, you must risk greatly. If you only take small risks, you are only entitled to a small life."
+
+"The person who experiences the most wins."
+
+"The best way to influence another human being is by example."
+
+"The best way to summit your outer mountains is to conquer your inner ones first"
+
+"The harder you work, the harder it is to surrender. - Vince Lombardi"
+
+"The true value of life lives not in the achieving but in the becoming"
+
+"Persistence of the champions comes after surrender to purpose. - George Zalucki"
+
+"People with goals succeed because they know where they're going. - Earl Nightingale"
+
+"The better your awareness, the better your choices. As you make better choices, you will see better results."
+
+"It's not that we can't have most of all we want. It's just that we don't want it bad enough to do what it takes to have it"
+
+"Everyone thinks of changing the world, but no one thinks of changing himself. - Leo Tolstoy"
+
+"Leadership isn't so much about position as it's about passion-and the obsessive pursuit of possibility"
+
+"Life is a mirror. Your outer struggles reflect your inner ones."
+
+"Success is a state of mind. If you want success, start thinking of yourself as a success. -Joyce Brothers"
+
+"Without a passion for discipline, the most beautiful of dreams have zero value"
+
+"The only competition worth focusing on is against what you were yesterday"
+
+"An idea is a point of departure and no more. As soon as you elaborate it, it becomes transformed by thought. - Picasso"
+
+"The place where your greatest fears live is also the place where your greatest growth lies."
+
+"Innovation distinguishes between a leader and a follower. -Steve Jobs"
+
+"Patience, persistence and perspiration make an unbeatable combination for success. -Napoleon Hill"
+
+"Be the master of your will but the servant of your conscience."
+
+"The quality of a leader is reflected in the standards they set for themselves. - Ray Kroc"
+
+"Failure is success if we learn from it. - Malcolm Forbes"
+
+"You'll always miss 100% of the shots you don't take. - Wayne Gretzky"
+
+"It is useless to desire more time if you are already wasting what little you have -James Allen"
+
+"The person who strives to do everything accomplishes nothing."
+
+"Efficiency is doing things right; effectiveness is doing the right things. - Peter Drucker"
+
+"Brave leadership involves the attraction of ridicule. Why? Because you see a future that no one else can see"
+
+"Having a goal in your mind helps you manifest it in some way.- Steve Nash"
+
+"Hardening of the attitudes is more deadly than hardening of the arteries"
+
+"No life is so hard that one can't make it easier by the way you take it. -Ellen Glasgow"
+
+"A friend of mine characterizes leaders simply like this: Leaders don't inflict pain. They bear pain. - Max DePree"
+
+"A commitment to excellence without a devotion to ethics is a waste of time"
+
+"A successful man is one who can build a firm foundation with the bricks that others throw at him. - David Brinkley"
+
+"Life happened because i turned the pages. - Alberto Manguel."
+
+"Creativity is all about seeing what everybody else is seeing and thinking what nobody else is thinking.."
+
+"We first make our habits, and then our habits make us. -John Dryden"
+
+"No life ever grows great until it is focused, dedicated and disciplined."
+
+"The valuable person in any business is the individual who can and will cooperate with others. - Elber Hubbard"
+
+"Never rush in love for it never runs out. Let love be the one to knock at your door, so by the time you start to fall, you know that your feeling is for sure."
+
+"Love has its ups and downs, its twists and turns. Love leaves you pain, teaches you until you learn and even if love takes so long, it always takes you to where you belong."
+
+"Women listen to music because they are in love. Men listen to music because they want to fall in love."
+
+"Some people don't get any respect at all because they are asking for the respect they deserve."
+
+"You don't marry someone you can live with. You marry the person who you cannot live without."
+
+"There is no such a thing as ignorance, but only degrees of wisdom."
+
+"Love is not about finding the right person, but creating the right relationship. It's not about how much love you have in the beginning but how much love you build till the end, coz love is all there is." 
+
+"Traffic. The black spell that makes commuters forget they are in love."
+
+"Love and stars are similar in one way. They keep you looking up every night."
+
+"There are two things rain helps improve: agricultural production and Philippine population."
+
+"It's better to lose your pride with someone you love, rather than lose that someone with your useless pride."
+
+"The greatest test of courage on earth is to bear defeat without losing heart."
+
+"When everything goes wrong, push! When you wish for something, push! When people don't understand, push. When you wish for love, P-ush U- ntil S-omething H-appens!" 
+
+"Guilt: The inner voice that tells us that Someone may be looking."
+
+"Being single is cool. No worrying about anyone, no obligations and best of all, no heartaches. But you know what? If you will never get your heart broken, you will never learn to love."
+
+"Looking at men who are drunk is a mistake. Looking at women who are drunk is a temptation."
+
+"Women fall in love through their ears, and men through their eyes."
+
+"Each of us is a star. Sometimes we shine with the rest. Sometimes we twinkle alone. Sometimes when we least know it, we make someone's wish come true." 
+
+"Home is the only place where one does not get homesick."
+
+"Every ten seconds, somewhere on this earth, there is a woman giving birth to a child. She must be found and stopped."
+
+"Beauty is in the eye of the beholder, and most often in the tongue of the liar."
+
+"A person is happy if he has a problem and enjoys solving it."
+
+"Girls are like cell phones, they like to be held and talked to, but press the wrong button and you're disconnected. Guys are like buses. If you miss that one, another will be along soon." 
+
+"It's good to have money and the things that money can buy, but it's good too to check up once in a while and make sure that you haven't lost the things that money cannot buy!"
+
+"In love, there is always one who kisses and one who offers the cheek."
+
+"Relationships are like traffic signs 1-way, 2-way, do not enter, no U turn, no left turn, but the best so far is give way and keep right. "
+
+"Being happy all the time is kind of boring."
+
+"When you love somebody, be ready to take the intensity of emotions. Be jealous, anxious. Love with all your might. Take the pain and everything that comes with it. Just make sure that the person is worth it."
+
+"Words and hearts should be handled with care... for words when spoken and hearts when broken are the hardest things to repair. "
+
+"It's amazing how one person can bring you so much happiness and pain in your life. Maybe it's really love knocking when he can make you so happy that you forget all the pains. So don't forget all the happiness when he breaks your heart."
+
+"It takes three seconds to say I love you, three minutes to explain, three hours to demonstrate, three days to appreciate, three terms to produce it, but a lifetime to prove it."
+
+"The best thing about an enemy is that he tells the truth about you."
+
+"Say good about yourself and you'll be called arrogant; say bad about yourself and you'll be believed."
+
+"Some flowers grow best in the sun; others do well in the shade. God plants us where we grow best and gives us loved ones to grow with."
+
+"There is no absolute freedom. When your girlfriend says, 'I love you', that is her freedom. But then again, will you let her say, 'I love you' to every man."
+
+"Love can never be taught for it is to be learned; love can never be bought for it is to be given; love can never be kept for it is to be free; love can never be old for it lives to last a lifetime."
+
+"When a battered wife learns to fight back, blame the husband. He showed signs of weakness. When a battered husband learns to fight back, blame the wife. She took too far."
+
+"Love is magic. The more we hide it, the more it shows; the more you suppress it, the more it grows."
+
+"It is always a pleasure to listen to persons bragging about their humility."
+
+"We forgive those who bore us but cannot forgive those whom we bore."
+
+"Happiness is your dentist telling you it won't hurt and then having him catch his hand in the drill. - Johnny Carson"
+
+"A verbal contract is not worth the paper it's written on. - Samuel Goldwyn"
+
+"Facts are stupid things. - Ronald Reagan, Former U.S. President"
+
+"I never comment on referees and I'm not going to break the habit of a lifetime for that prat. - Ron Atkinson"
+
+"I knew I was an unwanted baby when I saw that my bath toys were a toaster and a radio. - Joan Rivers"
+
+"We can repair anything. (Please knock hard on the door - the bell doesn't work.) - sign on door of repair shop"
+
+"If Barbie is so popular, why do you have to buy her friends? - Steven Wright"
+
+"Any intelligent fool can make things bigger, more complex, and more violent. It takes a touch of genius -- and a lot of courage -- to move in the opposite direction. - Albert Einstein" 
+
+"Imagination is more important than knowledge. - Albert Einstein" 
+
+"Gravitation is not responsible for people falling in love. - Albert Einstein" 
+
+"I want to know God's thoughts; the rest are details. - Albert Einstein" 
+
+"The hardest thing in the world to understand is the income tax. - Albert Einstein" 
+
+"Reality is merely an illusion, albeit a very persistent one. - Albert Einstein" 
+
+"The only real valuable thing is intuition. - Albert Einstein" 
+
+"A person starts to live when he can live outside himself. - Albert Einstein"
+ 
+"I am convinced that He (God) does not play dice. - Albert Einstein" 
+
+"God is subtle but he is not malicious. - Albert Einstein" 
+
+"Weakness of attitude becomes weakness of character. - Albert Einstein" 
+
+"I never think of the future. It comes soon enough. - Albert Einstein" 
+
+"The eternal mystery of the world is its comprehensibility. - Albert Einstein" 
+
+"Sometimes one pays most for the things one gets for nothing. - Albert Einstein" 
+
+"Science without religion is lame. Religion without science is blind. - Albert Einstein" 
+
+"Anyone who has never made a mistake has never tried anything new. - Albert Einstein" 
+
+"Great spirits have often encountered violent opposition from weak minds. - Albert Einstein" 
+
+"Everything should be made as simple as possible, but not simpler. - Albert Einstein" 
+
+"Common sense is the collection of prejudices acquired by age eighteen. - Albert Einstein" 
+
+"Science is a wonderful thing if one does not have to earn one's living at it. - Albert Einstein" 
+
+"The secret to creativity is knowing how to hide your sources. - Albert Einstein" 
+
+"The only thing that interferes with my learning is my education. - Albert Einstein" 
+
+"God does not care about our mathematical difficulties. He integrates empirically. - Albert Einstein" 
+
+"The whole of science is nothing more than a refinement of everyday thinking. - Albert Einstein" 
+
+"Technological progress is like an axe in the hands of a pathological criminal. - Albert Einstein"
+ 
+"Peace cannot be kept by force. It can only be achieved by understanding. - Albert Einstein" 
+
+"The most incomprehensible thing about the world is that it is comprehensible. - Albert Einstein"
+ 
+"We can't solve problems by using the same kind of thinking we used when we created them. - Albert Einstein" 
+
+"Education is what remains after one has forgotten everything he learned in school. - Albert Einstein" 
+
+"The important thing is not to stop questioning. Curiosity has its own reason for existing. - Albert Einstein"
+ 
+"Do not worry about your difficulties in Mathematics. I can assure you mine are still greater. - Albert Einstein" 
+
+"Equations are more important to me, because politics is for the present, but an equation is something for eternity. - Albert Einstein" 
+
+"If A is a success in life, then A equals x plus y plus z. Work is x; y is play; and z is keeping your mouth shut. - Albert Einstein" 
+
+"Two things are infinite: the universe and human stupidity; and I'm not sure about the the universe. - Albert Einstein" 
+
+"As far as the laws of mathematics refer to reality, they are not certain, as far as they are certain, they do not refer to reality. - Albert Einstein" 
+
+"Whoever undertakes to set himself up as a judge of Truth and Knowledge is shipwrecked by the laughter of the gods. - Albert Einstein" 
+
+"I know not with what weapons World War III will be fought, but World War IV will be fought with sticks and stones. - Albert Einstein" 
+
+"In order to form an immaculate member of a flock of sheep one must, above all, be a sheep. - Albert Einstein"
+ 
+"The fear of death is the most unjustified of all fears, for there's no risk of accident for someone who's dead. - Albert Einstein" 
+
+"Too many of us look upon Americans as dollar chasers. This is a cruel libel, even if it is reiterated thoughtlessly by the Americans themselves. - Albert Einstein" 
+
+"Heroism on command, senseless violence, and all the loathsome nonsense that goes by the name of patriotism -- how passionately I hate them! - Albert Einstein" 
+
+"No, this trick won't work...How on earth are you ever going to explain in terms of chemistry and physics so important a biological phenomenon as first love? - Albert Einstein" 

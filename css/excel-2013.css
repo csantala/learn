@@ -1,0 +1,97 @@
+.ExcelTable2013 {
+	width:100%;
+	font-size: 11pt;
+	font-family: Calibri;
+	font-weight: 100;
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+.ExcelTable2013 TH {
+	border: none;
+	font-weight: normal;
+	font-size: 14px;
+	height: 17px;
+}
+
+.ExcelTable2013 TD {
+	padding: 2px 4px 0px 2px;
+}
+
+.ExcelTable2013 TD B {
+
+	font-weight: bold;
+}
+
+.ExcelTable2013 TD.heading {
+
+	text-align: center;
+	width:25px;
+}
+
+.ExcelTable2013 TH.heading {
+}
+
+.ExcelTable2013 TR {
+	border:none;
+}
+
+.ExcelTable2013 TR:hover td {
+}
+
+.ExcelTable2013 td.start {
+
+	width:70px;
+	text-align:center;
+}
+
+.ExcelTable2013 input {
+	background-color:#000000;
+
+}
+
+.ExcelTable2013 .objective_count {
+	width:20px;
+	text-align:center;
+}
+
+.ExcelTable2013 .task  {
+		background-color:#FAFAFA;
+	//	border:none;
+
+}
+
+.objective {
+	color:#000000;
+	width:99%;
+}
+
+.steps {
+	color:#000000;
+	width:98%;
+}
+
+#date {
+	color:#7c7c7c;
+	position:relative;
+	float:left;
+	width:50%;
+}
+
+#student_name {
+	color:#000000;
+
+}
+
+
+#student_name span {
+	color:#7c7c7c;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 13px;
+}
+
+#done {
+	float:right;
+	text-align:right;
+	padding-bottom:20px;
+}
