@@ -59,11 +59,29 @@
 				<p><textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
 
 				<h5>STEPS</h5>
-				<?php $s = 1; foreach ($steps as $step) { ?>
-				<p class="row<?php echo $s;?>"><?php echo $s;?><input id="step"  class="span9" tabindex="" type="text" readonly value="<?php echo $step->step;?>" />&nbsp;<a class="glyphicons unchecked begin begin<?php echo $s;?>" data-s="<?php echo $s;?>"><i></i></a></p>
-				<input type="text" class="notes" data-n="<?php echo $s;?>" placeholder="notes">
+				<table>
+					<tr>
+						<?php $s = 1; foreach ($steps as $step) { ?>
+						<td class="step_number">
+							<?php echo $s;?>.
+						</td>
+						<td>
+							<span class="row<?php echo $s;?>"><input id="step"  class="span9" tabindex="" type="text" readonly value="<?php echo $step->step;?>" />&nbsp;
+						</td>
+						<td class="checkbox">
+							<a class="glyphicons unchecked begin begin<?php echo $s;?>" data-s="<?php echo $s;?>"><i></i></a></span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td>
+							<input type="text" class="notes" data-n="<?php echo $s;?>" placeholder="notes">
+						</td>
+					</tr>
+					<tr><td colspan="2">&nbsp;</td></tr>
 				<?php $s++; } ?>
-
+</table>
 		        <div class="row-fluid">
 
         		<div id="done">

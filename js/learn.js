@@ -4,7 +4,8 @@ $(document).ready(function() {
         e.preventDefault();
         var i = $('.rowx').last().data("i");
         var x = i + 1;
-        $('<p>' + x + ': <input data-i="' + x + '" class="span8 rowx" id="obj_row"' + x + '"" name="step' + x + '" type="text"></p>').insertBefore($(this));
+        $('<p>' + x + ': <input tabindex="' + x + '" data-i="' + x + '" class="span8 rowx" id="obj_row' + x + '" name="step' + x + '" type="text"></p>').insertBefore($(this));
+        $('#obj_row' + x).focus();
     });
 
       $(".begin").click(function(e) {
@@ -18,5 +19,4 @@ $(document).ready(function() {
           var n = $(this).data("n");
          $('<p><textarea name="note'+n+'" placeholder="notes"></textarea>').insertAfter($(this));
     });
-
 });
