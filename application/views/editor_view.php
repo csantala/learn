@@ -1,6 +1,6 @@
 <?php
 	date_default_timezone_set($timezone);
-	$synopsis_tip = "Click each checkbox for each completed step. Document your tasks in the notes fields.";
+	$synopsis_tip = "Click each checkbox for each completed step. Document the tasks in the notes fields.";
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -46,6 +46,7 @@
 
     <!-- LESS.js Library -->
     <script src="/common/theme/scripts/plugins/system/less.min.js"></script>
+
 </head>
 <body>
 		<h3 id="assignment_header">Synopsis&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip?>">?</a></h3>
@@ -62,22 +63,23 @@
 
 				<h5>STEPS</h5>
 				<table>
-					<tr>
-						<?php $s = 1; foreach ($steps as $step) { ?>
-						<td class="step_number">
+					<?php $s = 1; foreach ($steps as $step) { ?>
+					<tr class="step_panel<?php echo $s;?>">
+						<td class="step_number<?php echo $s;?>">
 							<?php echo $s;?>.
 						</td>
 						<td>
 							<span class="row<?php echo $s;?>"><input id="step" class="span7 steps" tabindex="" type="text" readonly value="<?php echo $step->step;?>" style="color:#000;" />&nbsp;
 						</td>
-						<td class="checkbox">
+						<td class="checkbox c<?php echo $s;?>">
 							<a class="glyphicons unchecked begin begin<?php echo $s;?>" data-s="<?php echo $s;?>"><i></i></a></span>
 						</td>
+					</div>
 					</tr>
-					<tr>
+					<tr class="step_panel<?php echo $s;?>">
 						<td>
 						</td>
-						<td>
+						<td colspan="2">
 							<div class="notes"><input type="text" data-n="<?php echo $s;?>" placeholder="notes"></div>
 						</td>
 					</tr>
@@ -101,6 +103,7 @@
       <script src="/common/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/bookmark.js"></script>
     <script src="/common/theme/scripts/demo/common.js?1384198042"></script>
+     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
 </body>
 </html>

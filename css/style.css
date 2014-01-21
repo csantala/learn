@@ -205,3 +205,14 @@ input {
 #done {
 	text-align:right;
 }
+
+.step_panel_sel {
+	background-color:#ddd;
+	#border: 1px dashed #aaa;
+}
+
+.step_pane_unsel {
+	background-color:#fff;
+	#border: none;
+	padding:none;
+}
