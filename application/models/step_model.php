@@ -15,4 +15,17 @@ class Step_model extends CI_Model {
 		if (empty($data)) { return null; }
 		else { return $data; }
 	}
+
+	public function get_steps_with_notes($assignment_id, $synopsis_id) {
+
+		$this->db->select('*');
+		$this->db->where('steps.assignment_id', $assignment_id);
+		$this->db->from('note');
+		$this->db->join('steps', 'note.step_id = steps.id', 'right');
+
+		$query = $this->db->get();
+
+		return $query->result();
+
+	}
 }

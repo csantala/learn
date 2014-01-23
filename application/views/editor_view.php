@@ -57,30 +57,37 @@
      	   </p>
         <div>
 		<br>
-        	<form id="begin" action="/generate/generate_report" method="post">
+        	<form id="begin" action="/generate/generate_report" method="post" data-sid="<?php echo $synopsis_id;?>" data-aid="<?php echo $assignment_id;?>">
 				<h5>OBJECTIVE</h5>
 				<p><textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
 
 				<h5>STEPS</h5>
 				<table>
-					<?php $s = 1; foreach ($steps as $step) { ?>
-					<tr class="step_panel<?php echo $s;?>">
-						<td class="step_number<?php echo $s;?>">
+					<?php $s=1; foreach ($steps as $step) { ?>
+						<?php
+							// so this renders the steps with the notes from the join with css and readonly params set depending on step status
+							// step panels CSS and text area properties are controlled through js
+							$status = 'check'; $visual = "step_panel_sel"; $readonly = null;
+
+							if ($step->status == 'open' || $step->status == '') { $status = 'unchecked'; $visual="step_panel_unsel"; } else { $status = 'check'; $readonly = 'readonly';}
+						?>
+					<tr class="step_panel<?php echo $step->id;?> <?php echo $visual;?>">
+						<td class="step_number<?php echo $step->id;?>">
 							<?php echo $s;?>.
 						</td>
 						<td>
-							<span class="row<?php echo $s;?>"><input id="step" class="span7 steps" tabindex="" type="text" readonly value="<?php echo $step->step;?>" style="color:#000;" />&nbsp;
+							<span class="row<?php echo $step->id;?>"><input id="step" class="span7 steps" tabindex="" type="text" readonly value="<?php echo $step->step;?>" style="color:#000;" />&nbsp;
 						</td>
-						<td class="checkbox c<?php echo $s;?>">
-							<a class="glyphicons unchecked begin begin<?php echo $s;?>" data-s="<?php echo $s;?>"><i></i></a></span>
+						<td class="checkbox c<?php echo $step->id;?>">
+							<a class="glyphicons <?php echo $status;?> begin begin<?php echo $step->id;?>" data-s="<?php echo $step->id;?>" data-status="<?php echo $step->status;?>"><i></i></a></span>
 						</td>
 					</div>
 					</tr>
-					<tr class="step_panel<?php echo $s;?>">
+					<tr class="step_panel<?php echo $step->id;?> <?php echo $visual;?>">
 						<td>
 						</td>
 						<td colspan="2">
-							<div class="notes"><input type="text" data-n="<?php echo $s;?>" placeholder="notes"></div>
+							<div class="notes" data-s="<?php echo $step->id;?>"><textarea <?php echo $readonly;?> data-step_id="<?php echo $step->id;?>" class="span6 note<?php echo $step->id;?> notes" placeholder="notes"><?php echo $step->note;?></textarea></div>
 						</td>
 					</tr>
 					<tr><td colspan="2">&nbsp;</td></tr>
@@ -88,8 +95,8 @@
 				</table>
 		        <div class="row-fluid">
 	        		<div id="done">
-	        			<input type="hidden" name="pid" value="<?php echo $project_id;?>">
-	        			<input type="hidden" name="aid" value="<?php echo $assignment_hash;?>">
+	        			<input type="hidden" name="pid" value="<?php echo $synopsis_id;?>">
+	        			<input type="hidden" name="aid" value="<?php echo $assignment_id;?>">
 	        			<input type="submit" class="btn btn-default primary" value="     SUBMIT ASSIGNMENT     ">
 	        			<!-- a class="btn primary confirm" href="/generate/generate_report/<?php echo $project_id?>/<?php echo $assignment_hash?>"SUBMIT ASSIGNMENT</a--></form>
 	        		</div>

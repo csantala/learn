@@ -18,28 +18,17 @@ class Home extends CI_Controller {
 			if ($assignment == '') { show_404(); }
 			$student_meta = $this->Synopsis_model->get_student($synopsis_hash);
 
-        	$rows = $this->Task_model->tasks($synopsis_hash);
-
-			$steps = $this->Step_model->get_steps($assignment_hash);
-			// create new synopses if !$rows
-			if (empty($rows)) {
-	       	    $rows[] = (object)array(
-	                'project_id' => $synopsis_hash,
-	                'position' => 1,
-	                'session' => time(),
-	                'time' => time(),
-	                'task' => '',
-	            );
-			}
+			// steps & notes join
+			//$steps = $this->Step_model->get_steps_with_notes($assignment_hash, $synopsis_hash);
+			$steps = $this->Step_model->get_steps_with_notes($assignment_hash, $synopsis_hash);
+		//	ds($steps);
 
            $view_data = array(
                 'objective' => $assignment->objective,
-                'assignment_hash' => $assignment_hash,
+                'assignment_id' => $assignment_hash,
                 'steps' => $steps,
                 'date' => time(), //$rows[0]->time,
-                'project_id' => $synopsis_hash,
-                'session' => $rows[0]->session,
-                'rows' => $rows,
+                'synopsis_id' => $synopsis_hash,
                 'timezone' => $student_meta->timezone,
                 'student_name' => $student_meta->student_name
             );
@@ -55,6 +44,10 @@ class Home extends CI_Controller {
             $this->load->view('home_view', $view_data);
         }
     }
+
+	public function write_note() {
+		$this->Note_model->write_note($_POST);
+	}
 
     public function edit_objective() {
         $this->load->view('/components/ajax/edit_objective', $_POST);
