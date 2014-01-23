@@ -11,20 +11,23 @@ class Generate extends CI_Controller {
 
     public function generate_report() {
 
-		ds($_POST,1);
+		//ds($_POST,1);
 
 		$stats = $this->tracker_lib->track('generate report');
 		$this->db->insert('tracker', $stats);
 
 		$project_id = $_POST['pid'];
-		$assignment_id = $_POST['aid'];
+		$asshash = $_POST['aid'];
+//ds($_POST,1);
+		// update notes in db
+		$this->Note_model->update_notes($_POST);
 
 		$student_meta = $this->Synopsis_model->get_student($project_id);
 		$student_name = $student_meta->student_name;
 
+	    $elapsed_time = array();
         // generate elapsed time
 	    // $synopsis = $this->Synopsis_model->synopsis($project_id);
-
 		// if (! empty($synopsis)) {
 		// 	$start = $synopsis[0]->time;
 		//	$end = $synopsis[count($synopsis) - 1]->time;
@@ -35,7 +38,7 @@ class Generate extends CI_Controller {
 		// TODO: fix this
 		$timezone = isset($_COOKIE['timezone']) ? $_COOKIE['timezone'] : 'America/Vancouver';
         // create report for project_id
-        $data = compact('project_id', 'elapsed_time', 'project_id', 'timezone', 'asshash', 'student_name');
+        $data = compact('project_id', 'elapsed_time', 'project_id', 'timezone', '$asshash', 'student_name');
         $this->Report_model->create_report($data);
 
 		$assignment = $this->Objectives_model->get_assignment($asshash);

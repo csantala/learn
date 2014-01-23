@@ -15,10 +15,10 @@ $(document).ready(function() {
           $(this).toggleClass('unchecked check');
           if($(this).is('.check')) {
              status = 'closed';
-            $('.note'+s).attr('disabled', true);
+           // $('.note'+s).attr('disabled', true);
           } else {
             status = 'open';
-            $('.note'+s).attr('readonly', false);
+           // $('.note'+s).attr('readonly', false);
           }
           $('.step_panel'+s).toggleClass('step_panel_sel step_panel_unsel');
           //$('<span>DONE</span>').insertAfter($(this));

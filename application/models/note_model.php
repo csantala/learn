@@ -24,9 +24,23 @@ class Note_model extends CI_Model {
 			$this->db->where('step_id', $data['step_id']);
 			$this->db->where('assignment_id', $data['assignment_id']);
 			$this->db->where('synopsis_id', $data['synopsis_id']);
-			$this->db->update('note', $data); error_log('update!');
+			$this->db->update('note', $data);
 		} else {
 			$this->db->insert('note', $data);
+		}
+	}
+
+	public function update_notes($post) {
+		foreach ($post as $name => $note) {
+			if (is_int($name)) {
+				$data = array(
+					'assignment_id' => $post['aid'],
+					'synopsis_id' => $post['pid'],
+					'step_id' => $name,
+					'note' => $note
+				);
+				$this->db->update('note', $data);
+			}
 		}
 	}
 }

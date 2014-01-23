@@ -61,7 +61,8 @@ $(document).ready(function() {
 	<br>
 	<form id="begin" action="/create/begin" method="post">
 		<p>
-			STUDENT NAME:<input tabindex="1" id="student_name" name="student_name" class="span3" type="text" style="color:#000000" />
+			<h5>STUDENT NAME</h5>
+			<input tabindex="1" id="student_name" name="student_name" class="span3" type="text" style="color:#000000" />
 		</p>
 
 		<h5>OBJECTIVE</h5>
