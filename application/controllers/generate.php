@@ -18,14 +18,14 @@ class Generate extends CI_Controller {
 
 		$project_id = $_POST['pid'];
 		$asshash = $_POST['aid'];
-//ds($_POST,1);
+		//ds($_POST,1);
 		// update notes in db
 		$this->Note_model->update_notes($_POST);
 
 		$student_meta = $this->Synopsis_model->get_student($project_id);
 		$student_name = $student_meta->student_name;
 
-	    $elapsed_time = array();
+	    $elapsed_time = 0;
         // generate elapsed time
 	    // $synopsis = $this->Synopsis_model->synopsis($project_id);
 		// if (! empty($synopsis)) {
@@ -38,7 +38,7 @@ class Generate extends CI_Controller {
 		// TODO: fix this
 		$timezone = isset($_COOKIE['timezone']) ? $_COOKIE['timezone'] : 'America/Vancouver';
         // create report for project_id
-        $data = compact('project_id', 'elapsed_time', 'project_id', 'timezone', '$asshash', 'student_name');
+        $data = compact('project_id', 'elapsed_time', 'project_id', 'timezone', 'asshash', 'student_name');
         $this->Report_model->create_report($data);
 
 		$assignment = $this->Objectives_model->get_assignment($asshash);
@@ -54,15 +54,15 @@ class Generate extends CI_Controller {
 		$assignment = $this->Objectives_model->get_assignment($assignment_hash);
 	//	if ($assignment == '') { show_404(); }
 
-		$synopses = $this->Task_model->tasks($synopsis_id);
-		if (empty($synopses)) { show_404(); }
+	//	$synopses = $this->Task_model->tasks($synopsis_id);
+	//	if (empty($synopses)) { show_404(); }
 
-		$report_url = site_url() . 'report/' . $synopsis_id;
+		$report_url = site_url() . 'home/' . $assignment_hash . '/' . $synopsis_id;
 		$status = 'submitted';
 		$this->Synopsis_model->update_synopsis_for_report(compact('status', 'report_url', 'synopsis_id'));
 
 		$view_data = array(
-			'report_url' => $report_url
+			'worksheet_url' => $report_url
 		);
 
 		$this->load->view('submitted_view', $view_data);

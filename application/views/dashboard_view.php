@@ -83,20 +83,19 @@
 		  <table id="scanner_data">
 		  	<tr>
 				<th>Student</th>
-				<th>Elapsed Time</th>
-				<th>Progress</th>
+				<!--th>Elapsed Time</th-->
+				<th>Worksheet</th>
 				<th>Status</th>
-				<th>Report</th>
 			</tr>
 			<?php
 				if (! empty($scanner_data)) {
 					foreach($scanner_data as $data) { //ds($data,1);?>
 			<tr>
 				<td><?php echo $data->student_name;?></td>
-				<td><?php echo $data->elapsed_time;?></td>
+				<!--td><?php echo $data->elapsed_time;?></td-->
 				<td><a href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>">synopsis</a></td>
 				<td><?php echo $data->status;?></td>
-				<td><?php if ($data->report_url != '') { ?><a href="<?php echo $data->report_url;?>">Report</a><?php } else { echo "-----"; }?></td>
+				<!--td><?php if ($data->report_url != '') { ?><a href="<?php echo $data->report_url;?>">Report</a><?php } else { echo "-----"; }?></td-->
 			</tr>
 			<?php } ?>
 		<?php } else { ?>

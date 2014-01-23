@@ -39,7 +39,21 @@ class Note_model extends CI_Model {
 					'step_id' => $name,
 					'note' => $note
 				);
-				$this->db->update('note', $data);
+				$query = $this->db->get_where('note', array(
+					'step_id' => $name,
+					'assignment_id' => $post['aid'],
+					'synopsis_id' => $post['pid']
+				));
+				// update if present, otherwise create a new row if unique ($objective_id)
+				if ($query->num_rows() > 0) {
+					error_log('update!' . $name);
+					$this->db->where('step_id', $name);
+					$this->db->where('assignment_id', $data['assignment_id']);
+					$this->db->where('synopsis_id', $data['synopsis_id']);
+					$this->db->update('note', $data);
+				} else {error_log('write!');
+					$this->db->insert('note', $data);
+				}
 			}
 		}
 	}

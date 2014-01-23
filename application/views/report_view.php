@@ -69,30 +69,47 @@
 				<p><input id="objective" type="text" readonly value="<?php echo $objective;?>" />
 </p>
 
-				<h5>NOTES</h5>
-			<p>	<textarea id="steps" readonly><?php echo $steps;?></textarea>
+
 </p>
 				</form>
-				<?php echo $date?>&nbsp;&bull;&nbsp;Elapsed time: <?php echo $elapsed_time;?>&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $et_tip;?>">?</a><br>
-
+				<!--
+				<?php //echo $date?>&nbsp;&bull;&nbsp;Elapsed time: <?php echo $elapsed_time;?>&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $et_tip;?>">?</a><br>
+-->
 	        <!-- Row -->
 	        <div class="row-fluid row-merge widget">
-	            <table class="dynamicTable table table-striped table-bordered table-condensed dataTable span12">
-	                <tr>
-	                    <th class="report_clock">clock</th>
-	                    <th class="report_task">task</th>
-	                </tr>
-	                <tbody>
-	                    <?php
-	                        foreach ($synopsis as $task) {
-	                    ?>
-	                    <tr>
-	                        <td><?php echo date("g:i:a", $task->time);?></td>
-	                        <td class="task" data-task_id="<?php echo $task->id;?>" style="color:#111"><?php echo $task->task?>
-	                    </tr>
-	                <?php } ?>
-	                </tbody>
-	           </table>
+	            <h5>STEPS</h5>
+				<table>
+					<?php $s=1; foreach ($steps as $step) { ?>
+						<?php
+							// so this renders the steps with the notes from the join with css and readonly params set depending on step status
+							// step panels CSS and text area properties are controlled through js
+							$status = 'check'; $visual = "step_panel_sel"; $readonly = null;
+
+							if ($step->status == 'open' || $step->status == '') { $status = 'unchecked'; $visual="step_panel_unsel"; } else { $status = 'check'; $readonly = 'readonly';}
+						?>
+					<tr class="step_panel<?php echo $step->id;?> <?php echo $visual;?>">
+						<td class="step_number<?php echo $step->id;?>">
+							<?php echo $s;?>.
+						</td>
+						<td>
+							<span class="row<?php echo $step->id;?>"><input id="step" class="span7 steps" tabindex="" type="text" readonly value="<?php echo $step->step;?>" style="color:#000;" />&nbsp;
+						</td>
+						<td class="checkbox c<?php echo $step->id;?>">
+							<a class="glyphicons <?php echo $status;?> begin begin<?php echo $step->id;?>" data-s="<?php echo $step->id;?>" data-status="<?php echo $step->status;?>"><i></i></a></span>
+						</td>
+					</div>
+					</tr>
+					<tr class="step_panel<?php echo $step->id;?> <?php echo $visual;?>">
+						<td>
+						</td>
+						<td colspan="2">
+							<div class="notes" data-s="<?php echo $step->id;?>"><textarea <?php //echo $readonly;?> data-step_id="<?php echo $step->id;?>" class="span6 note<?php echo $step->id;?> notes" placeholder="notes" name="<?php echo $step->id;?>"><?php echo $step->note;?></textarea></div>
+
+						</td>
+					</tr>
+					<tr><td colspan="2">&nbsp;</td></tr>
+				<?php $s++; } ?>
+				</table>
 	           </div>
 	           <a href="/home/<?php echo $assignment_id;?>/<?php echo $synopsis_id;?>">continue synopsis</a>&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $continue_tip;?>">?</a>
 

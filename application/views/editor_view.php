@@ -9,7 +9,7 @@
 <!--[if gt IE 8]> <html class="ie gt-ie8"> <![endif]-->
 <!--[if !IE]><!--><html><!-- <![endif]-->
 <head>
-	<title>Synopsis</title>
+	<title>Worksheet</title>
 
     <!-- Meta -->
     <meta charset="UTF-8" />
@@ -49,7 +49,7 @@
 
 </head>
 <body>
-		<h3 id="assignment_header">Synopsis&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip?>">?</a></h3>
+		<h3 id="assignment_header">Worksheet &bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip?>">?</a></h3>
 		<div id="student_name_container">
 			<p>
 			<h5>STUDENT</h5>
@@ -111,7 +111,7 @@
       <script src="/common/bootstrap/js/bootstrap.min.js"></script>
     <script src="/js/bookmark.js"></script>
     <script src="/common/theme/scripts/demo/common.js?1384198042"></script>
-     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 
 </body>
 </html>
