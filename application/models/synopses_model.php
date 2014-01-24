@@ -9,9 +9,7 @@ class Synopses_model extends CI_Model {
 		$this->db->from('task');
 		$this->db->join('synopsis', 'task.session = synopsis.session');
 		$data = $this->db->get();
-
 		$data = $data->result();
-
 		return $data;
 	}
 

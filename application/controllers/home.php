@@ -18,12 +18,9 @@ class Home extends CI_Controller {
 			if ($assignment == '') { show_404(); }
 			$student_meta = $this->Synopsis_model->get_student($synopsis_hash);
 
-			// steps & notes join
-			//$steps = $this->Step_model->get_steps_with_notes($assignment_hash, $synopsis_hash);
 			$steps = $this->Step_model->get_steps_with_notes($assignment_hash, $synopsis_hash);
-		//	ds($steps);
 
-           $view_data = array(
+           	$view_data = array(
                 'objective' => $assignment->objective,
                 'assignment_id' => $assignment_hash,
                 'steps' => $steps,
