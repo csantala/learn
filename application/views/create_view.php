@@ -80,7 +80,7 @@ $(document).ready(function () {
 	</script>
 </head>
 <body>
-	<h3 id="assignment_header">Create An Assignment</h3>
+	<h4 id="assignment_header">Create An Assignment</h4>
 	<br>
 	<form id="assignment_form" action="/create" method="post">
 		<h5>OBJECTIVE&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $objective_tip;?>">?</a></h5>

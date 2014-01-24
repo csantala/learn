@@ -57,7 +57,7 @@ $(document).ready(function() {
 	</script>
 </head>
 <body>
-	<h3 id="assignment_header">Assignment</h3>
+	<h4 id="assignment_header">Assignment</h4>
 	<br>
 	<form id="begin" action="/create/begin" method="post">
 		<p>

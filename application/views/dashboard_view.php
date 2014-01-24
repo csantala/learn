@@ -57,7 +57,7 @@
     <script src="/js/bookmark.js"></script>
 </head>
 <body>
-	<h3 id="assignment_header">Assignment Dashboard</h3>
+	<h4 id="assignment_header">Student Progress</h4>
 <br>
    <h5>ASSIGNMENT URL&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $assignment_tip;?>">?</a></h5>
    <p>
@@ -78,14 +78,14 @@
 			?>
 		</p>
 <br>
-		<h4 id="progress">Progress&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $progress_tip;?>">?</a></h4>
+		<!--h4 id="progress">Progress&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $progress_tip;?>">?</a></h4-->
 
 		  <table id="scanner_data">
 		  	<tr>
 				<th>Student</th>
 				<!--th>Elapsed Time</th-->
-				<th>Worksheet</th>
 				<th>Status</th>
+				<th>Worksheet</th>
 			</tr>
 			<?php
 				if (! empty($scanner_data)) {
@@ -93,8 +93,8 @@
 			<tr>
 				<td><?php echo $data->student_name;?></td>
 				<!--td><?php echo $data->elapsed_time;?></td-->
-				<td><a href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>">synopsis</a></td>
 				<td><?php echo $data->status;?></td>
+				<td><a href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>">synopsis</a></td>
 				<!--td><?php if ($data->report_url != '') { ?><a href="<?php echo $data->report_url;?>">Report</a><?php } else { echo "-----"; }?></td-->
 			</tr>
 			<?php } ?>

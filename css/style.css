@@ -203,6 +203,7 @@ input {
 }
 
 #done {
+	width:100%;
 	text-align:right;
 }
 

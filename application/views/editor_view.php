@@ -49,7 +49,7 @@
 
 </head>
 <body>
-		<h3 id="assignment_header">Worksheet &bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip?>">?</a></h3>
+		<h4 id="assignment_header">Worksheet &bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip?>">?</a></h4>
 		<div id="student_name_container">
 			<p>
 			<h5>STUDENT</h5>
@@ -94,7 +94,7 @@
 					<tr><td colspan="2">&nbsp;</td></tr>
 				<?php $s++; } ?>
 				</table>
-		        <div class="row-fluid">
+		        <div class="_row-fluid">
 	        		<div id="done">
 	        			<input type="hidden" name="pid" value="<?php echo $synopsis_id;?>">
 	        			<input type="hidden" name="aid" value="<?php echo $assignment_id;?>">
