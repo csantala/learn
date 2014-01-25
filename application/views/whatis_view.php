@@ -5,12 +5,12 @@
 <!--[if gt IE 8]> <html class="ie gt-ie8"> <![endif]-->
 <!--[if !IE]><!--><html><!-- <![endif]-->
 <head>
-    <title>Assignment.Synopsis: Electronic Learning Aid</title>
+    <title>Learn: Electronic Learning Aid</title>
 
     <!-- Meta -->
     <meta charset="UTF-8" />
-    <meta name="description" content="Instant synopses generator tool for your objective. Anonymous and private.">
-	<meta name="keywords" content="synopses generator, development, productivity, achievement, objectives, awesome">
+    <meta name="description" content="Instructor driven student assignment system.">
+	<meta name="keywords" content="learning aid, assignment generator">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -42,7 +42,6 @@
     <!-- LESS.js Library -->
     <script src="/common/theme/scripts/plugins/system/less.min.js"></script>
 
-
 </head>
 <body class="">
 
@@ -51,7 +50,7 @@
         <div class="innerLR innerT">
             <div class="widget">
                 <div class="widget-head">
-                    <h4 class="heading edit_objective">Assignment.Synopsis: Electronic Learning Aid</h4>
+                    <h4 class="heading edit_objective">LEARN</h4>
                     <span class="details pull-right">
                     	<a href="<?php echo site_url();?>create">Create An Assignment</a>
                     </span>
@@ -59,14 +58,14 @@
                 <div class="widget-body">
                     <div class="row-fluid">
                     	<h5>Electronic Learning Aid</h5>
-                    	<p>This is a system which manages the creation and completion of an assignment conducted by an instructor with any number of students.<p><p>  Essentially, the instructor creates an assignment, passes its URL to the students who then complete the assignment while logging their work. Students return their synopsis to the instructor in the form of a report.  Links to each report appear in the instructor's dashboard. A report can be commented on and is always available at its unique hashed URL.</p>
-                    	<h5>Real Time Synopsis Editor</h5>
-
-                    	<p>Students use the synopsis editor to document the tasks they take to complete the assignment. The editor is served with a unique hashed URL meaning that it may always be returned to in the future for further work - it's best to bookmark this page.</p>
+                    	<p>This is a system which manages the creation and completion of an assignment conducted by an instructor with any number of students.<p>
                     	<h5>Usage</h5>
-                    	<p>Simply <a href="<?php echo site_url();?>create">create an assignment</a>, send its URL to your students, and then bookmark/monitor your assignment dashboard as they complete their work.  You can view and comment on student reports with links from the dashboard. </p>
-            			<h5>Synopsis mini</h5>
-            			An online synopsis editor and reporter (minus the assignment functionality of this site) is available at <a href="http://synopsis.ablitica.com" target="_blank">synopsis.ablitica.com</a>
+                    	<p>Simply <a href="<?php echo site_url();?>create">create an assignment</a>, send its Assignment URL to your students, and then monitor their work.</p>
+                    	<p>The Assignment URL will provide each student with a unique worksheet of which you can view and monitor from your Assignment dashboard.</p>
+                    	<h5>Demo</h5>
+                    	<p>Example A: <a href="http://learn.ablitica.com/dashboard/27qeOa5/wRwgvzo">Dashboard with Assignment & Steps</a></p>
+                    	<p>Example B: <a href="http://learn.ablitica.com/assignment/wRwgvzo">Assigment URL</a></p>
+                    	<p>Example C: <a href="http://learn.ablitica.com/home/wRwgvzo/AEBozao">Student Worksheet</a></p>
  					 </div>
                 </div>
             </div>

@@ -1,1 +1,1 @@
-<a href="\minis\" class="appbrand">Assignment</a>
+<a href="\minis\" class="appbrand">LEARN</a>

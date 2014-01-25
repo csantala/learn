@@ -4,7 +4,7 @@
 
 		public function __construct () {
 			parent::__construct();
-			$stats = $this->tracker_lib->track('tracker');
+			$stats = $this->tracker_lib->track('WhatIs');
 			$this->db->insert('tracker', $stats);
 		}
 

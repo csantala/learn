@@ -49,7 +49,7 @@
 
 </head>
 <body>
-		<h4 id="assignment_header">Worksheet &bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip?>">?</a></h4>
+		<!--h4 id="assignment_header">Worksheet &bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip?>">?</a></h4-->
 		<div id="student_name_container">
 			<p>
 			<h5>STUDENT</h5>
@@ -59,7 +59,7 @@
 		<br>
         	<form id="begin" action="/generate/generate_report" method="post" data-sid="<?php echo $synopsis_id;?>" data-aid="<?php echo $assignment_id;?>">
 				<h5>OBJECTIVE</h5>
-				<p><textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
+				<p><textarea tabindex="1" class="span7 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
 
 				<h5>STEPS</h5>
 				<table>

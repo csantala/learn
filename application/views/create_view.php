@@ -1,6 +1,6 @@
 <?php
 	$objective_tip = "Enter the main objective of this assignment here (required field).";
-	$step_tip = "Enter the steps for the student to complete. Students will checkmark each step upon completion and elapsed time will be measured for each step.";
+	$step_tip = "Enter the steps for the student to complete. Students will checkmark each step upon completion.";
 	$email_tip = "Receive email notifications when when a student has submitted a report (not requried).";
 ?>
 <!DOCTYPE html>
