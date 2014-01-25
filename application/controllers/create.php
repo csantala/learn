@@ -22,7 +22,7 @@ class Create extends CI_Controller {
 			// bundle steps
 			$steps = array();
 			foreach($_POST as $name => $step) {
-				if ($name != 'objective' && $step != '') {
+				if ($name != 'objective') {
 					$steps[] = $step;
 				}
 			}

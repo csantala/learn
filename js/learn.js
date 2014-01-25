@@ -53,4 +53,5 @@ $(document).ready(function() {
          $('.note'+s).focus();
          $(this).unbind('click');
     });
+
 });

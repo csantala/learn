@@ -7,7 +7,7 @@ class Note_model extends CI_Model {
 		$this->db->where('synopsis_id', $synopsis_id);
 		$query = $this->db->get('note');
 		$data = $query->result();
-		if (! empty($data[0])) { return $data; }
+		if (! empty($data[0])) { return $data[0]; }
 		return array();
 
 	}

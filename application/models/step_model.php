@@ -3,7 +3,10 @@
 class Step_model extends CI_Model {
 
     public function write_step($step) {
+//ds($step,1);
+	if ($step['step'] != '') { 
 		$this->db->insert('steps', $step);
+	}
     }
 
 	public function get_steps($assignment_hash) {

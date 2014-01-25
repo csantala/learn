@@ -84,7 +84,7 @@ $(document).ready(function () {
 	<br>
 	<form id="assignment_form" action="/create" method="post">
 		<h5>OBJECTIVE&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $objective_tip;?>">?</a></h5>
-		<textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000"></textarea>
+		<textarea tabindex="1" class="span8 objective" type="text" name="objective" style="color:#000"></textarea>
 		<div id="objectives">
 			<h5>STEPS&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $step_tip;?>">?</a></h5>
 			<?php for ($i = 1; $i<=5; $i++) {?>

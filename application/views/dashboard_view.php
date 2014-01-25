@@ -61,14 +61,16 @@
 <br>
    <h5>ASSIGNMENT URL&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $assignment_tip;?>">?</a></h5>
    <p>
-  	 <input onclick="select()" class="span5"  style="color:#008000" type="text" value="<?php echo $assignment_url;?>">
+  	 <input onclick="select()" class="span9"  style="color:#008000" type="text" value="<?php echo $assignment_url;?>">
   	</p>
 		<h5>OBJECTIVE</h5>
 		<p>
 			<textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea>
 		</p>
-
+<?php
+	if (count($steps) > 0) { ?>
 		<h5>STEPS</h5>
+ <?php } ?>
 		<p>
 			<?php
 				$i = 1;
