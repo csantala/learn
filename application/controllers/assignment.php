@@ -18,6 +18,8 @@ class Assignment extends CI_Controller {
 			$synopsis_id = hashids_encrypt(time() + rand(1,10000));
 
 			$view_data = array(
+				'course' => $assignment->course,
+				'instructor' => $assignment->instructor,
 				'objective' => $assignment->objective,
 				'steps' => $this->Step_model->get_steps($assignment_id),
 				'assignment_id' => $assignment_id,

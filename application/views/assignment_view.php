@@ -57,7 +57,8 @@ $(document).ready(function() {
 	</script>
 </head>
 <body>
-	<h4 id="assignment_header">Assignment</h4>
+	<h4 id="assignment_header"></h4>
+	<h5><?php echo $course . " " . $instructor;?></h5>
 	<br>
 	<form id="begin" action="/create/begin" method="post">
 		<p>

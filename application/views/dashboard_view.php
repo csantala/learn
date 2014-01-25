@@ -57,7 +57,8 @@
     <script src="/js/bookmark.js"></script>
 </head>
 <body>
-	<h4 id="assignment_header">Student Progress</h4>
+	<h4 id="assignment_header"></h4>
+	<h5><?php echo $course . " " . $instructor;?></h5>
 <br>
    <h5>ASSIGNMENT URL&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $assignment_tip;?>">?</a></h5>
    <p>

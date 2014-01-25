@@ -16,6 +16,8 @@ class Create extends CI_Controller {
 		$assignment_id = hashids_encrypt(time() + rand(0,10000));
 
 		if (! empty($_POST)) {
+			$instructor =  $_POST['instructor'];
+			$course = $_POST['course'];
 			$teacher_email = 'test@test.com'; // $_POST['teacher_email'];
 			$objective = $_POST['objective'];
 
@@ -39,7 +41,9 @@ class Create extends CI_Controller {
 				'objective' => $objective,
 				'steps' => '',
 				'teacher_email' => $teacher_email,
-				'assignment_id' => $assignment_id
+				'assignment_id' => $assignment_id,
+				'course' => $course,
+				'instructor' => $instructor
 			);
 
 			// write objective and hash to db

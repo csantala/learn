@@ -49,7 +49,8 @@
 
 </head>
 <body>
-		<!--h4 id="assignment_header">Worksheet &bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip?>">?</a></h4-->
+		<h4 id="assignment_header"></h4>
+		<h5><?php echo $course . " " . $instructor;?></h5>
 		<div id="student_name_container">
 			<p>
 			<h5>STUDENT</h5>

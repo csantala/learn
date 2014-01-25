@@ -22,6 +22,8 @@ class Home extends CI_Controller {
 			$steps = $this->Step_model->get_steps_with_notes($assignment_hash, $synopsis_hash);
 
            	$view_data = array(
+           		'course' => $assignment->course,
+				'instructor' => $assignment->instructor,
                 'objective' => $assignment->objective,
                 'assignment_id' => $assignment_hash,
                 'steps' => $steps,
