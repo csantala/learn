@@ -67,9 +67,9 @@ $(document).ready(function () {
 	    	 objective: {
 	            required: true
 	     	},
-	        teacher_email: {
+	        step1: {
 	 //           required: true,
-	            email: true
+	            required: true
 	        },
 	    },
 	    submitHandler: function (form) {
