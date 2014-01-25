@@ -9,6 +9,10 @@ body {
 	color:#414141 !important;
 }
 
+.glyphicons i:before {
+color: #609450;
+}
+
 input:focus{
 	outline:none !important;
 }

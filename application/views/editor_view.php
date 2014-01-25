@@ -98,7 +98,7 @@
 	        		<div id="done">
 	        			<input type="hidden" name="pid" value="<?php echo $synopsis_id;?>">
 	        			<input type="hidden" name="aid" value="<?php echo $assignment_id;?>">
-	        			<input type="submit" class="btn btn-default primary" value="     SUBMIT ASSIGNMENT     ">
+	        			<input type="submit" class="btn btn-block btn-success" value="     SUBMIT ASSIGNMENT     ">
 	        			<!-- a class="btn primary confirm" href="/generate/generate_report/<?php echo $project_id?>/<?php echo $assignment_hash?>"SUBMIT ASSIGNMENT</a--></form>
 	        		</div>
 		        </div>
