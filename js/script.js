@@ -32,8 +32,13 @@ $(document).ready(function() {
         if (student_name == '') { alert('please enter student name'); return false; }
     });
 
-    // send
     $('.confirm').click(function(){
+         var name = confirm('Submit this to your instructor?');
+         if (name == false) { return false; }
+    });
+
+    // send
+    $('.confirm_').click(function(){
         var validated = false;
 //        $('#synopsis input').each(function(n, e){
  //           if($(this).val() != '' && n != 0) { validated = true; }
