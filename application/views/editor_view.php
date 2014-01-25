@@ -87,8 +87,7 @@
 						<td>
 						</td>
 						<td colspan="2">
-							<div class="notes" data-s="<?php echo $step->id;?>"><textarea <?php //echo $readonly;?> data-step_id="<?php echo $step->id;?>" class="span6 note<?php echo $step->id;?> notes" placeholder="notes" name="<?php echo $step->id;?>"><?php echo $step->note;?></textarea></div>
-
+							<div class="notes" data-note="<?php echo $step->note;?>" data-s="<?php echo $step->id;?>"><div <?php //echo $readonly;?> data-step_id="<?php echo $step->id;?>" class="span6 note<?php echo $step->id;?> notes" placeholder="notes" name="<?php echo $step->id;?>"><?php if ($step->note == '') { $step->note = "<i>click to add note</i>"; } ?><?php echo $this->typography->auto_typography($step->note);?></div></div>
 						</td>
 					</tr>
 					<tr><td colspan="2">&nbsp;</td></tr>

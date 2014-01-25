@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 // add steps
     $(".add_button").click(function(e) {
         e.preventDefault();
@@ -43,11 +42,15 @@ $(document).ready(function() {
             return true;
     });
 
-    $(".notes_").blur(function(e) {
+     $(".notes").click(function(e) {
         e.preventDefault();
          $(this).attr('notes', '');
          var s = $(this).data("s");
+         var notes = $(this).data("note");
+        // $('.step_panel'+s).css("background","#fff");
 
-         alert('update ' + s);
+         $(this).html('<textarea class="span6 note'+s+'" data-step_id="'+s+'" data-note="'+s+'" name="'+s+'" placeholder="notes">'+notes+'</textarea>');
+         $('.note'+s).focus();
+         $(this).unbind('click');
     });
 });
