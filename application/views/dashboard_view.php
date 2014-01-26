@@ -88,7 +88,7 @@
 				<th>Student</th>
 				<!--th>Elapsed Time</th-->
 				<th>Status</th>
-				<th>Mark</th>
+				<th>Grade</th>
 				<th>Worksheet</th>
 			</tr>
 			<?php

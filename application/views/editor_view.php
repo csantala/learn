@@ -126,7 +126,7 @@
 		        <div class="clearfix"></div>
 		        <div class="span6">
 		        	<form action="/generate/mark" method="post">
-		        		<p><input type="text" placeholder="mark" name="mark" class="span1" size="2" value="<?php echo $marked_meta->mark; ?>"></p>
+		        		<p><input type="text" placeholder="grade" name="mark" class="span1" size="2" value="<?php echo $marked_meta->mark; ?>"></p>
 		        		<p><textarea placeholder="comments" name="comments" class="span6"><?php echo $marked_meta->comments;?></textarea></p>
 		        		<input type="hidden" name="dashboard_id" value="<?php echo $dashboard_id;?>">
 		        		<input type="hidden" name="assignment_id" value="<?php echo $assignment_id;?>">
