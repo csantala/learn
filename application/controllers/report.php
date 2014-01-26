@@ -50,4 +50,5 @@ class Report extends CI_Controller {
            $this->load->view('report_view', $data);
         }
     }
+
 }

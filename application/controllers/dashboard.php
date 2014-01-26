@@ -24,6 +24,7 @@ class Dashboard extends CI_Controller {
 			$steps = $this->Step_model->get_steps($assignment_hash);
 
 			$view_data = array(
+				'dashboard_id' => $dashboard_hash,
 				'course' => $assignment->course,
 				'instructor' => $assignment->instructor,
 				'objective' => isset($assignment->objective) ? $assignment->objective : '',

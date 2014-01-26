@@ -51,12 +51,28 @@
 <body>
 		<h4 id="assignment_header"></h4>
 		<h5><?php echo $course . " " . $instructor;?></h5>
-		<div id="student_name_container">
-			<p>
-			<h5>STUDENT</h5>
-        	<input id="student_name" value=" <?php echo $student_name; ?>" name="student_name" class="span3 student_name" type="text" readonly style="color:#000000" />
-     	   </p>
-        <div>
+		<table>
+			<tr>
+				<td>
+					<div id="student_name_container">
+						<p>
+							<h5>STUDENT</h5>
+        					<input id="student_name" value=" <?php echo $student_name; ?>" name="student_name" class="span3 student_name" type="text" readonly style="color:#000000" />
+     				   </p>
+     			   <div>
+     			</td>
+     			<td>
+     				<div id="marked_meta">
+
+					<?php
+						if(! empty($marked_meta)) { ?>
+							<h3><?php echo $marked_meta->mark; ?></h3>
+							<h4><?php echo $marked_meta->comments;?></h4>
+					<?php } ?>
+					</div>
+     			</td>
+     		</tr>
+  	   </table>
 		<br>
         	<form id="begin" action="/generate/generate_report" method="post" data-sid="<?php echo $synopsis_id;?>" data-aid="<?php echo $assignment_id;?>">
 				<h5>OBJECTIVE</h5>
@@ -94,14 +110,31 @@
 					<tr><td colspan="2">&nbsp;</td></tr>
 				<?php $s++; } ?>
 				</table>
-		        <div class="_row-fluid">
+		        <div class="span6">
 	        		<div id="done">
 	        			<input type="hidden" name="pid" value="<?php echo $synopsis_id;?>">
 	        			<input type="hidden" name="aid" value="<?php echo $assignment_id;?>">
+	        			<?php if ($is_instructor) {?>
+	        			<!--input type="submit" class="btn btn-block btn-success confirm" value="     UPDATE ASSIGNMENT     "-->
+	        			<?php } else { ?>
 	        			<input type="submit" class="btn btn-block btn-success confirm" value="     SUBMIT ASSIGNMENT     ">
-	        			<!-- a class="btn primary confirm" href="/generate/generate_report/<?php echo $project_id?>/<?php echo $assignment_hash?>"SUBMIT ASSIGNMENT</a--></form>
+	        			<?php } ?>
+	        			</form>
 	        		</div>
 		        </div>
+		        <?php if ($is_instructor) {?>
+		        <div class="clearfix"></div>
+		        <div class="span6">
+		        	<form action="/generate/mark" method="post">
+		        		<p><input type="text" placeholder="mark" name="mark" class="span1" size="2" value="<?php echo $marked_meta->mark; ?>"></p>
+		        		<p><textarea placeholder="comments" name="comments" class="span6"><?php echo $marked_meta->comments;?></textarea></p>
+		        		<input type="hidden" name="dashboard_id" value="<?php echo $dashboard_id;?>">
+		        		<input type="hidden" name="assignment_id" value="<?php echo $assignment_id;?>">
+		        		<input type="hidden" name="synopsis_id" value="<?php echo $synopsis_id;?>">
+		        		<p><input type="submit" class="btn btn-block btn-success span6" value="     MARK ASSIGNMENT     "></p>
+		        	</form>
+		      	</div>
+		      	<?php } ?>
 <div id="getlost">
         <?php // $this->load->view('/components/footer') ?>
 </div>

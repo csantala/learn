@@ -114,4 +114,17 @@ class Generate extends CI_Controller {
         );
 		return $this->load->view('report_email_view', $data, TRUE);
 	}
+
+
+	public function mark() {
+		if (! empty($_POST)) {
+			//ds($_POST,1);
+			// write/update mark and comments to worksheet
+			$this->Synopsis_model->write_mark($_POST);
+			redirect('/dashboard/' . $_POST['dashboard_id'] . '/' . $_POST['assignment_id']);
+		}
+		else {
+			show_404();
+		}
+	}
 }

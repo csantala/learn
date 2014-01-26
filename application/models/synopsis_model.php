@@ -109,4 +109,30 @@ class Synopsis_model extends CI_Model {
 		$this->db->update('synopsis');
 	}
 
+	public function write_mark($data) {
+		$params = array(
+			'assignment_id' => $data['assignment_id'],
+			'synopsis_id' => $data['synopsis_id']
+		);
+
+		$query = $this->db->get_where('synopsis',$params);
+
+		// update if present, otherwise create a new row if unique ($objective_id)
+		if ($query->num_rows() > 0) {
+			$this->db->where($params);
+			$this->db->update('synopsis', $data);
+		} else {
+			$this->db->insert('synopsis', $data);
+		}
+	}
+
+	public function get_mark($data) {
+        $this->db->where($data);
+        $query = $this->db->get('synopsis');
+        $data = $query->result();
+		if (empty($data)) { return null; }
+		else { return $data[0]; }
+
+	}
+
 }
