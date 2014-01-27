@@ -2,6 +2,7 @@
 	$dashboard_tip = "Bookmark this page for future reference.";
 	$assignment_tip = "Email or Text this URL to your students.";
 	$progress_tip = "Student progress appears in this panel.  Click a Report link to view a report of the student's synopsis. Report links only appear when a student has submitted their completed work.";
+	$student_tip = "Click name for student worksheet.";
 ?>
 
 <!DOCTYPE html>
@@ -61,14 +62,14 @@
 	<h4 id="assignment_header"></h4>
 	<h5><?php echo $course . " " . $instructor;?></h5>
 <br>
-   <h5>ASSIGNMENT URL&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $assignment_tip;?>">?</a></h5>
+   <h5>ASSIGNMENT URL&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $assignment_tip;?>">?</a></h5>
    <p>
   	 <input onclick="select()" class="span9"  style="color:#008000" type="text" value="<?php echo $assignment_url;?>">
   	</p>
 		<h5>OBJECTIVE</h5>
 		<p>
 			<textarea style="vertical-align: middle" tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000"><?php echo $objective;?></textarea>
-			 <a id="glyphicons edit upd_obj" data-dashboard_id="<?php echo $dashboard_id;?>">update</a>
+			 <a id="upd_obj" data-dashboard_id="<?php echo $dashboard_id;?>">update</a>
 		</p>
 <?php
 	if (count($steps) > 0) { ?>
@@ -87,23 +88,22 @@
 <br>
 		<!--h4 id="progress">Progress&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $progress_tip;?>">?</a></h4-->
 
-		  <table id="scanner_data">
+		  <table id="scanner_data" class="dynamicTable table table-striped table-bordered table-condensed dataTable">
 		  	<tr>
-				<th>Student</th>
+				<th>Student&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="top" data-original-title="<?php echo $student_tip;?>">?</a></th>
 				<!--th>Elapsed Time</th-->
 				<th>Status</th>
 				<th>Grade</th>
-				<th>Worksheet</th>
 			</tr>
 			<?php
 				if (! empty($scanner_data)) {
 					foreach($scanner_data as $data) { //ds($data,1);?>
 			<tr>
-				<td><?php echo $data->student_name;?></td>
+				<td><a target="_blank" href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>/<?php echo $dashboard_id;?>"><?php echo $data->student_name;?></a></td>
 				<!--td><?php echo $data->elapsed_time;?></td-->
 				<td><?php echo $data->status;?></td>
 				<td><?php echo $data->mark;?></td>
-				<td><a target="_blank" href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>/<?php echo $dashboard_id;?>">synopsis</a></td>
+
 				<!--td><?php if ($data->report_url != '') { ?><a href="<?php echo $data->report_url;?>">Report</a><?php } else { echo "-----"; }?></td-->
 			</tr>
 			<?php } ?>
@@ -116,8 +116,10 @@
 		<?php } ?>
 		</table>
 	<hr>
+
 <div id="getlost">
 	<?php $this->load->view('/components/footer') ?>
+
 </div>
 
 <script src="/common/bootstrap/js/bootstrap.min.js"></script>
