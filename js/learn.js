@@ -54,4 +54,57 @@ $(document).ready(function() {
          $(this).unbind('click');
     });
 
-});
+ $("#upd_obj").click(function(e) {
+       var dashboard_id = $('body').data('dashboard_id');
+       var objective = $('.objective').val();
+        $.ajax({
+            type: "POST",
+            url: '/create/update_objective',
+            data: {
+                dashboard_id: dashboard_id,
+                objective: objective,
+            }
+        }).done(function( msg ) {
+            $('.objective').fadeOut("fast");
+            $('.objective').fadeIn("fast");
+        });
+        return true;
+    });
+
+     $(".upd_step").click(function(e){
+       var dashboard_id = $('body').data('dashboard_id');
+       var step_id = $(this).data('step');
+       var step_txt = $('.step'+step_id).val();
+        $.ajax({
+            type: "POST",
+            url: '/create/update_step',
+            data: {
+                dashboard_id: dashboard_id,
+                step_id: step_id,
+                step: step_txt
+            }
+        }).done(function( msg ) {
+            $('.step'+step_id).fadeOut("fast");
+            $('.step'+step_id).fadeIn("fast");
+        });
+        return true;
+    });
+
+/*
+   $(document).on('blur', '.editobj__', function () {
+     var objective = $(this).val();
+     var dashboard_id = $(this).data('dashboard_id');
+                 $.ajax({
+                        type: "POST",
+                        url: '/create/update_objective',
+                        data: {
+                            dashboard_id: dashboard_id,
+                            objective: objective,
+                        }
+                    }).done(function( msg ) {
+                      $('.editobj').attr('disabled', true);
+                    });
+                return true;
+        });
+  */
+    });

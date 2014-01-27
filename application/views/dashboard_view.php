@@ -55,8 +55,9 @@
     <script src="/common/theme/scripts/plugins/system/less.min.js"></script>
 
     <script src="/js/bookmark.js"></script>
+    <script src="/js/learn.js"></script>
 </head>
-<body>
+<body data-dashboard_id="<?php echo $dashboard_id;?>">
 	<h4 id="assignment_header"></h4>
 	<h5><?php echo $course . " " . $instructor;?></h5>
 <br>
@@ -66,7 +67,8 @@
   	</p>
 		<h5>OBJECTIVE</h5>
 		<p>
-			<textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea>
+			<textarea style="vertical-align: middle" tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000"><?php echo $objective;?></textarea>
+			 <a id="glyphicons edit upd_obj" data-dashboard_id="<?php echo $dashboard_id;?>">update</a>
 		</p>
 <?php
 	if (count($steps) > 0) { ?>
@@ -76,7 +78,9 @@
 			<?php
 				$i = 1;
 				foreach ($steps as $step) { ?>
-					<p><?php echo $i; $i++; ?>. <input id="step" class="span9" type="text" name="step<?php echo $step->id;?>" value="<?php echo $step->step;?>" readonly></p>
+					<p><?php echo $i; $i++;?>. <input style="vertical-align: middle" class="span9 step<?php echo $step->id;?>" type="text" name="step<?php echo $step->id;?>" data-step_id="step<?php echo $step->id;?>" value="<?php echo $step->step;?>" >
+						 <a class="upd_step <?php echo $step->id;?>" data-step="<?php echo $step->id;?>">update</a>
+					</p>
 				<?php }
 			?>
 		</p>
@@ -118,6 +122,6 @@
 
 <script src="/common/bootstrap/js/bootstrap.min.js"></script>
 <script src="/common/theme/scripts/demo/common.js?1384198042"></script>
-
+<!--script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script -->
 </body>
 </html>

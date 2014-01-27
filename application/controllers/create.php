@@ -11,7 +11,6 @@ class Create extends CI_Controller {
 		$stats = $this->tracker_lib->track('create assignment');
 		$this->db->insert('tracker', $stats);
 
-
 		$dashboard_id = hashids_encrypt(time());
 		$assignment_id = hashids_encrypt(time() + rand(0,10000));
 
@@ -59,6 +58,18 @@ class Create extends CI_Controller {
 			redirect(site_url() . 'dashboard/' . $dashboard_id . '/' . $assignment_id);
 		} else {
 			$this->load->view('create_view');
+		}
+	}
+
+	public function update_objective() {
+		if (! empty($_POST)) {
+			$this->Objectives_model->update_objective($_POST);
+		}
+	}
+
+	public function update_step() {
+		if (! empty($_POST)) {
+			$this->Step_model->update_step($_POST);
 		}
 	}
 
