@@ -90,19 +90,21 @@
 
 		  <table id="scanner_data" class="dynamicTable table table-striped table-bordered table-condensed dataTable">
 		  	<tr>
-				<th>Student&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="top" data-original-title="<?php echo $student_tip;?>">?</a></th>
+				<th>Worksheet&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="top" data-original-title="<?php echo $student_tip;?>">?</a></th>
 				<!--th>Elapsed Time</th-->
 				<th>Status</th>
 				<th>Grade</th>
+				<th></th>
 			</tr>
 			<?php
 				if (! empty($scanner_data)) {
 					foreach($scanner_data as $data) { //ds($data,1);?>
 			<tr>
-				<td><a target="_blank" href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>/<?php echo $dashboard_id;?>"><?php echo $data->student_name;?></a></td>
+				<td><a target="_blank" href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>"><?php echo $data->student_name;?></a></td>
 				<!--td><?php echo $data->elapsed_time;?></td-->
 				<td><?php echo $data->status;?></td>
 				<td><?php echo $data->mark;?></td>
+				<td><a target="_blank" href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>/<?php echo $dashboard_id;?>">mark report</a></td>
 
 				<!--td><?php if ($data->report_url != '') { ?><a href="<?php echo $data->report_url;?>">Report</a><?php } else { echo "-----"; }?></td-->
 			</tr>
