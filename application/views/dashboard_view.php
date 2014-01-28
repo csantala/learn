@@ -104,7 +104,7 @@
 				<!--td><?php echo $data->elapsed_time;?></td-->
 				<td><?php echo $data->status;?></td>
 				<td><?php echo $data->mark;?></td>
-				<td><a target="_blank" href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>/<?php echo $dashboard_id;?>">mark report</a></td>
+				<td><a target="_blank" href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>/<?php echo $dashboard_id;?>">mark assignment</a></td>
 
 				<!--td><?php if ($data->report_url != '') { ?><a href="<?php echo $data->report_url;?>">Report</a><?php } else { echo "-----"; }?></td-->
 			</tr>
