@@ -36,13 +36,18 @@ class Home extends CI_Controller {
 				'instructor' => $assignment->instructor,
                 'objective' => $assignment->objective,
                 'assignment_id' => $assignment_id,
+                'assignment_hash' => $assignment_id,
                 'steps' => $steps,
                 'date' => time(), //$rows[0]->time,
                 'synopsis_id' => $synopsis_id,
+                'assignment_hash' => $assignment_id,
+                'session' => null,
+                'project_id' => $assignment_id,
                 'timezone' => $student_meta->timezone,
                 'student_name' => $student_meta->student_name
             );
             $this->load->view('editor_view', $view_data);
+           // $this->load->view('worksheet_view', $view_data);
         } else {
 			show_404();
         	// TODO: generate proper id

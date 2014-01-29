@@ -22,7 +22,7 @@ class Task_model extends CI_Model {
 
 	public function insert_task() {
 		$data = array(
-			'project_id' => $_POST['project_id'],
+			'project_id' => $_POST['assignment_id'],
 			'session' => $_POST['session'],
 			'time' => $_POST['time'],
 			'position' => $_POST['position'],

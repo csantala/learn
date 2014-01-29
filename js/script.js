@@ -67,7 +67,7 @@ $(document).ready(function() {
     $(".task").focus();
 
     // session identifier
-    session = $('#rows').data("session");
+    session = $('.rows').data("session");
 
     // render elapsed time upon new synopsis
     last_time = $('.rowx').last().find('span').data("time");
@@ -75,11 +75,11 @@ $(document).ready(function() {
     elapsed_time(last_time, session);
 
     // navigation and row generation
-    $("#rows").on('keydown', '.rowx', (function(e) {
+    $(".rows").on('keydown', '.rowx', (function(e) {
             $('#getlost').fadeOut("42");
 
         // project identifier
-        project_id = $('#rows').data("project_id");
+        project_id = $('.rows').data("step_id");
 
         // current row
         i = $(this).find('input:text').data("i");
@@ -230,7 +230,7 @@ function update_inputs() {
 }
 
 function write_task(url, i, project_id, session, task, time, elapsed_time) {
-    var assignment_id = $('#rows').data("assignment_id");
+    var assignment_id = $('.rows').data("assignment_id");
     $.ajax({
         type: "POST",
         url: url,
