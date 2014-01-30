@@ -1,7 +1,7 @@
-<?php date_default_timezone_set($timezone); ?>
+<?php date_default_timezone_set($timezone);?>
 	<script type="text/javascript" src="/js/script.js"></script>
 				<form class="synopsis">
-		                <div class="rows" data-assignment_id="<?php echo $assignment_id?>"  data-step_id="<?php echo $step_id?>" data-session="0">
+		                <div class="rows" data-assignment_id="<?php echo $assignment_id?>" data-step_id="<?php echo $step_id?>" data-session="0">
 		                    <table class="ExcelTable2013">
 		                        <tr style="color:#bbb">
 		                            <!--th></th>
@@ -13,10 +13,10 @@
 		                                foreach ($rows as $row) { ?>
 		                                    <tr class="rowx">
 		                                        <td class="start">
-		                                            <span data-time="<?php echo $row->time ?>"><?php echo date('g:i', $row->time);?>:</span>
+		                                            <?php echo $i; $i++;?>. <span data-time="<?php echo $row->time ?>"><?php echo date('g:i:s', $row->time);?></span>
 		                                        </td>
 		                                        <td>
-		                                            <input maxlength="300" class="task span6" type="text" data-i="<?php echo $row->position; ?>" <?php if ($row->task != '') { ?> value="<?php echo $row->task; ?>"<?php } ?>/>
+		                                            <input data-step_id="<?php echo $step_id?>" maxlength="300" class="task span6" type="text" data-i="<?php echo $row->position; ?>" <?php if ($row->task != '') { ?> value="<?php echo $row->task; ?>"<?php } ?>/>
 		                                        </td>
 		                                    </tr>
 		                            <?php } ?>

@@ -48,7 +48,7 @@
     <script src="/common/theme/scripts/plugins/system/less.min.js"></script>
 
 </head>
-<body data-timezone="<?php echo $timezone;?>">
+<body data-timezone="<?php echo $timezone;?>" data-synopsis_id="<?php echo $synopsis_id;?>">
 		<h4 id="assignment_header"></h4>
 		<h5><?php echo $course . " " . $instructor;?></h5>
 		<table>
@@ -108,10 +108,11 @@
 								<table>
 								<?php
 		                               if (count($rows[$s-1]) > 0) {
+		                               	$i = 1;
 		                                foreach ($rows[$s-1] as $row) { ?>
 		                                    <tr class="rowx">
 		                                        <td class="start">
-		                                            <span data-time="<?php echo $row->time ?>"><?php echo date('g:i', $row->time);?>:</span>
+		                                            <?php echo $i; $i++;?>. <span data-time="<?php echo $row->time ?>"><?php echo date('g:i:s', $row->time);?></span>
 		                                        </td>
 		                                        <td>
 		                                            &nbsp;&nbsp;<?php echo $row->task; ?>

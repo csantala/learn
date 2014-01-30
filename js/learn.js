@@ -1,5 +1,5 @@
 $(document).ready(function() {
-// add steps
+    // add steps
     $(".add_button").click(function(e) {
         e.preventDefault();
         var i = $('.rowx').last().data("i");
@@ -94,10 +94,12 @@ $(document).ready(function() {
         var assignment_id = $(this).data("assignment_id");
         var step_id = $(this).data("step_id");
         var timezone = $('body').data("timezone");
+        var synopsis_id = $('body').data("synopsis_id");
         $(this).load("/home/load_editor",{
             assignment_id: assignment_id,
             step_id: step_id,
-            timezone: timezone
+            timezone: timezone,
+            synopsis_id: synopsis_id
         });
     });
 

@@ -9,9 +9,10 @@ class Task_model extends CI_Model {
 		return $data->result();
 	}
 
-	public function tasks($assignment_id, $step_id) {
+	public function tasks($assignment_id, $step_id, $synopsis_id) {
 		$this->db->where('assignment_id', $assignment_id);
 		$this->db->where('step_id', $step_id);
+		$this->db->where('synopsis_id', $synopsis_id);
 	//	$this->db->where('session', $session);
 		$this->db->order_by("position", "asc");
 		$data = $this->db->get('task');
@@ -24,6 +25,7 @@ class Task_model extends CI_Model {
 	public function insert_task() {
 		$data = array(
 			'assignment_id' => $_POST['assignment_id'],
+			'synopsis_id' => $_POST['synopsis_id'],
 			'step_id' => $_POST['step_id'],
 			'session' => $_POST['session'],
 			'time' => $_POST['time'],
@@ -34,6 +36,7 @@ class Task_model extends CI_Model {
 		$this->db->where('position >=', $_POST['position']);
 		$this->db->where('assignment_id', $_POST['assignment_id']);
 		$this->db->where('step_id', $_POST['step_id']);
+		$this->db->where('synopsis_id', $_POST['synopsis_id']);
 		$this->db->where('session', $_POST['session']);
 		$this->db->set('position', 'position+1', FALSE);
 		$this->db->update('task');
@@ -46,7 +49,8 @@ class Task_model extends CI_Model {
 			'session' => $_POST['session'],
 			'assignment_id' => $_POST['assignment_id'],
 			'position' => $_POST['position'],
-			'step_id' => $_POST['step_id']
+			'step_id' => $_POST['step_id'],
+			'synopsis_id' => $_POST['synopsis_id']
 		));
 		// update if present, otherwise create a new row if unique ($task_id)
 		if ($query->num_rows() > 0) {
@@ -59,10 +63,12 @@ class Task_model extends CI_Model {
 			$this->db->where('session', $_POST['session']);
 			$this->db->where('assignment_id', $_POST['assignment_id']);
 			$this->db->where('step_id', $_POST['step_id']);
+			$this->db->where('synopsis_id', $_POST['synopsis_id']);
 			$this->db->update('task', $data);
 		} else {
 			$data = array(
 				'assignment_id' => $_POST['assignment_id'],
+				'synopsis_id' => $_POST['synopsis_id'],
 				'step_id' => $_POST['step_id'],
 				'session' => $_POST['session'],
 				'time' => $_POST['time'],

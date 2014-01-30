@@ -134,14 +134,16 @@ $(document).ready(function() {
             case 13:
                 e.preventDefault();
                 var next = i + 1;
+                var step_id = $(this).find('input:text').data('step_id');
                 if ($(this).next('tr').find('input:text').length == 0) {
-                    $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm') + '</span>:</td><td><input maxlength="300" class="task span6" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
+                    $('<tr class="rowx"><td class="start">'+next+'. <span data-time="'+ moment().format('X') + '">' + moment().format('h:mm:ss') + '</span></td><td><input maxlength="300" data-step_id="'+step_id+'" class="task span6" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
                 }
                 var task = $(this).find('input:text').val();
                 var time = moment().format('X');
                 var et = elapsed_time(moment().format('X'), session);
                 // save position (i) and task
-                write_task('/synopsis/task', i, assignment_id, session, task, time, et);
+                var step_id = $(this).find('input:text').data('step_id');
+                write_task('/synopsis/task', i, step_id, session, task, time, et);
                 $(this).next('tr').find('input:text').focus();
                 elapsed_time(moment().format('X'), session);
             break;
@@ -229,9 +231,9 @@ function update_inputs() {
     });
 }
 
-function write_task(url, i, assignment_id, session, task, time, elapsed_time) {
+function write_task(url, i, step_id, session, task, time, elapsed_time) {
     var assignment_id = $('.rows').data("assignment_id");
-    var step_id = $('.rows').data("step_id");
+    var synopsis_id = $('body').data('synopsis_id');
     $.ajax({
         type: "POST",
         url: url,
@@ -242,7 +244,8 @@ function write_task(url, i, assignment_id, session, task, time, elapsed_time) {
             task: task,
             time: time,
             elapsed_time: elapsed_time,
-            assignment_id: assignment_id
+            assignment_id: assignment_id,
+            synopsis_id: synopsis_id
         }
     }).done(function( msg ) {
        // console.log(elapsed_time);

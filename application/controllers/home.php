@@ -27,7 +27,7 @@ class Home extends CI_Controller {
 			// get synopsis for steps
 			$rows = array();
 			foreach ($steps as $step) {
-				$rows[] = $this->Task_model->tasks($assignment_id,$step->id);
+				$rows[] = $this->Task_model->tasks($assignment_id,$step->id, $synopsis_id);
 			}
 //ds($rows);
 			// get marked meta if any
@@ -87,12 +87,13 @@ class Home extends CI_Controller {
 
 	// synopsis editor ajax
 	public function load_editor() {
-    	$rows = $this->Task_model->tasks($_POST['assignment_id'],$_POST['step_id']);
+    	$rows = $this->Task_model->tasks($_POST['assignment_id'],$_POST['step_id'],$_POST['synopsis_id']);
 		// create new synopses if !$rows
 		if (empty($rows)) {
        	    $rows[] = (object)array(
                 'step_id' => $_POST['step_id'],
                 'assignment_id' => $_POST['assignment_id'],
+                'synopsis_id' => $_POST['synopsis_id'],
                 'position' => 1,
                 'session' => time(),
                 'time' => time(),
@@ -102,6 +103,7 @@ class Home extends CI_Controller {
 
 		$view_vars = array(
 			'assignment_id' => $_POST['assignment_id'],
+			'synopsis_id' => $_POST['synopsis_id'],
 			'step_id' => $_POST['step_id'],
 			'rows' => $rows,
             'timezone' => $_POST['timezone']
