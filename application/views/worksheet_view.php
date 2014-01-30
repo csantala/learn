@@ -81,6 +81,7 @@
 				<h5>STEPS</h5>
 				<table>
 					<?php $s=1; foreach ($steps as $step) { ?>
+
 						<?php
 							// so this renders the steps with the notes from the join with css and readonly params set depending on step status
 							// step panels CSS and text area properties are controlled through js
@@ -96,9 +97,8 @@
 							<span class="row<?php echo $step->id;?>"><input id="step" class="span7 steps" tabindex="" type="text" readonly value="<?php echo $step->step;?>" style="color:#000;" />&nbsp;
 						</td>
 						<td class="checkbox c<?php echo $step->id;?>">
-							<a class="glyphicons <?php echo $status;?> begin begin<?php echo $step->id;?>" data-step_id="<?php echo $step->id;?>" data-status="<?php echo $step->status;?>"><i></i></a></span>
+							<a class="glyphicons <?php echo $status;?> begin begin<?php echo $step->id;?>" data-s="<?php echo $s;?>" data-step_id="<?php echo $step->id;?>" data-status="<?php echo $step->status;?>"><i></i></a></span>
 						</td>
-					</div>
 					</tr>
 					<tr class="step_panel<?php echo $step->id;?> <?php echo $visual;?>">
 						<td>

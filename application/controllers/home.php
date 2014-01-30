@@ -22,8 +22,8 @@ class Home extends CI_Controller {
 			if ($assignment == '') { show_404(); }
 			$student_meta = $this->Synopsis_model->get_student($synopsis_id);
 
-			$steps = $this->Step_model->get_steps_with_notes($assignment_id, $assignment_id);
-
+			$steps = $this->Step_model->get_steps_with_notes($assignment_id, $synopsis_id);
+//ds($steps);
 			// get synopsis for steps
 			$rows = array();
 			foreach ($steps as $step) {
@@ -53,8 +53,8 @@ class Home extends CI_Controller {
                 'timezone' => $student_meta->timezone,
                 'student_name' => $student_meta->student_name
             );
-            $this->load->view('editor_view', $view_data);
-            //$this->load->view('worksheet_view', $view_data);
+            //$this->load->view('editor_view', $view_data);
+            $this->load->view('worksheet_view', $view_data);
         } else {
 			show_404();
         	// TODO: generate proper id

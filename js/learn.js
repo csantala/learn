@@ -10,7 +10,7 @@ $(document).ready(function() {
 
       $(".begin").click(function(e) {
         e.preventDefault();
-          var s = $(this).data("s");
+          var step_id = $(this).data('step_id');
           $(this).toggleClass('unchecked check');
           if($(this).is('.check')) {
              status = 'closed';
@@ -18,14 +18,13 @@ $(document).ready(function() {
           } else {
             status = 'open';
            // $('.note'+s).attr('readonly', false);
-          }
-          $('.step_panel'+s).toggleClass('step_panel_sel step_panel_unsel');
+          } console.log(step_id);
+          $('.step_panel'+step_id).toggleClass('step_panel_sel step_panel_unsel');
           //$('<span>DONE</span>').insertAfter($(this));
-          $('.c' +s).effect('bounce');
+
          var aid = $('#begin').data('aid');
          var sid = $('#begin').data('sid');
-         var note = $('.note'+s).val();
-         var step_id = $('.note'+s).data('step_id');
+
              $.ajax({
                     type: "POST",
                     url: '/home/write_note',
@@ -33,11 +32,10 @@ $(document).ready(function() {
                         status: status,
                         assignment_id: aid,
                         synopsis_id: sid,
-                        note: note,
                         step_id: step_id
                     }
                 }).done(function( msg ) {
-                 //   console.log(msg);
+                    $('.c' +step_id).effect('bounce');
                 });
             return true;
     });
