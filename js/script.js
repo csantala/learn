@@ -104,7 +104,7 @@ $(document).ready(function() {
             // deactivated
             case 000192:
                 e.preventDefault();
-                $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm a') + '</span></td><td><input maxlength="300" class="task" type="text" /></td></tr>').insertBefore($(this));
+                $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm') + '</span>:</td><td><input maxlength="300" class="task span6" type="text" /></td></tr>').insertBefore($(this));
                 update_inputs();
                 var time = $(this).find('span').data("time");
                 write_task('/synopsis/insert_task', i, assignment_id, session, '', time);
@@ -135,7 +135,7 @@ $(document).ready(function() {
                 e.preventDefault();
                 var next = i + 1;
                 if ($(this).next('tr').find('input:text').length == 0) {
-                    $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm a') + '</span></td><td><input maxlength="300" class="task" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
+                    $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm') + '</span>:</td><td><input maxlength="300" class="task span6" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
                 }
                 var task = $(this).find('input:text').val();
                 var time = moment().format('X');

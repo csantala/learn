@@ -111,13 +111,14 @@
 		                                foreach ($rows[$s-1] as $row) { ?>
 		                                    <tr class="rowx">
 		                                        <td class="start">
-		                                            <span data-time="<?php echo $row->time ?>"><?php echo date('g:i a', $row->time);?></span>
+		                                            <span data-time="<?php echo $row->time ?>"><?php echo date('g:i', $row->time);?>:</span>
 		                                        </td>
 		                                        <td>
-		                                            <?php echo $row->task; ?>
+		                                            &nbsp;&nbsp;<?php echo $row->task; ?>
 		                                        </td>
 		                                    </tr>
 		                                <?php } ?>
+		                                <tr><td>&nbsp;</td></tr>
 		                            <?php } else { ?>
 		                            	<i>add synopsis</i>
 		                            <?php } ?>
