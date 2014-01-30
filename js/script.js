@@ -74,18 +74,20 @@ $(document).ready(function() {
 
     elapsed_time(last_time, session);
     assignment_id = $('.rows').data("step_id");
-      $(".rows").on('blur', '.rowx', (function(e){
+
+     $(".rows").on('blur', '.rowx', (function(e){
         var step_id = $(this).find('input:text').data('step_id');
         var task = $(this).find('input:text').val();
         var time = $(this).find('span').data("time");
         i = $(this).find('input:text').data("i");
-        if (task != '') { write_task('/synopsis/update_task', i, assignment_id, session, task, time);}
+        if (task != '') { write_task('/synopsis/update_task', i, step_id, session, task, time);}
        }));
+
     // navigation and row generation
     $(".rows").on('keydown', '.rowx', (function(e) {
         // current row
         i = $(this).find('input:text').data("i");
-         var step_id = $(this).find('input:text').data('step_id');
+        var step_id = $(this).find('input:text').data('step_id');
         // keypress handling
         switch(e.which) {
 
