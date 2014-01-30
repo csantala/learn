@@ -73,6 +73,7 @@ $(document).ready(function() {
        var dashboard_id = $('body').data('dashboard_id');
        var step_id = $(this).data('step');
        var step_txt = $('.step'+step_id).val();
+
         $.ajax({
             type: "POST",
             url: '/create/update_step',

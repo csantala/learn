@@ -35,6 +35,7 @@ class Step_model extends CI_Model {
 			'dashboard_id' => $post['dashboard_id'],
 			'step' => $post['step']
 		);
+		error_log($post['step']);
 		$this->db->where('dashboard_id', $post['dashboard_id']);
 		$this->db->where('id', $post['step_id']);
 		$this->db->update('steps', $data);

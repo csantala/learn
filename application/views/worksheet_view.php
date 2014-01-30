@@ -94,7 +94,7 @@
 							<?php echo $s;?>.
 						</td>
 						<td>
-							<span class="row<?php echo $step->id;?>"><input id="step" class="span7 steps" tabindex="" type="text" readonly value="<?php echo $step->step;?>" style="color:#000;" />&nbsp;
+							<span class="row<?php echo $step->id;?>"><input id="step" class="span7 steps" tabindex="" type="text" readonly value="<?php echo quotes_to_entities($step->step);?>" style="color:#000;" />&nbsp;
 						</td>
 						<td class="checkbox c<?php echo $step->id;?>">
 							<a class="glyphicons <?php echo $status;?> begin begin<?php echo $step->id;?>" data-s="<?php echo $s;?>" data-step_id="<?php echo $step->id;?>" data-status="<?php echo $step->status;?>"><i></i></a></span>
@@ -115,7 +115,7 @@
 		                                            <?php echo $i; $i++;?>. <span data-time="<?php echo $row->time ?>"><?php echo date('g:i:s', $row->time);?></span>
 		                                        </td>
 		                                        <td>
-		                                            &nbsp;&nbsp;<?php echo $row->task; ?>
+		                                            &nbsp;&nbsp;<?php echo quotes_to_entities($row->task); ?>
 		                                        </td>
 		                                    </tr>
 		                                <?php } ?>

@@ -79,7 +79,7 @@
 			<?php
 				$i = 1;
 				foreach ($steps as $step) { ?>
-					<p><?php echo $i; $i++;?>. <input style="vertical-align: middle" class="span9 step<?php echo $step->id;?>" type="text" name="step<?php echo $step->id;?>" data-step_id="step<?php echo $step->id;?>" value="<?php echo $step->step;?>" >
+					<p><?php echo $i; $i++;?>. <input style="vertical-align: middle" class="span9 step<?php echo $step->id;?>" type="text" name="step<?php echo $step->id;?>" data-step_id="step<?php echo $step->id;?>" value="<?php echo quotes_to_entities($step->step);?>" >
 						 <a class="upd_step <?php echo $step->id;?>" data-step="<?php echo $step->id;?>">update</a>
 					</p>
 				<?php }
