@@ -47,12 +47,13 @@
     <script type="text/javascript" src="/common/theme/scripts/plugins/system/less.min.js"></script>
 	<script src="/js/jstz.min.js"></script>
 	<script type="text/javascript" src="/js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+
     <script>
 $(document).ready(function() {
 	$("#student_name").focus();
-//	var timezone = jstz.determine();
-//	$.cookie('timezone', timezone.name());
+	var timezone = jstz.determine();
+	$("#timezone").val(timezone.name());
+	//$.cookie('timezone', timezone.name());
 });
 	</script>
 </head>
@@ -76,6 +77,7 @@ $(document).ready(function() {
 		<input type="hidden" value="<?php echo $synopsis_url?>" name="synopsis_url">
 		<input type="hidden" value="<?php echo $synopsis_id;?>" name="synopsis_id">
 		<input type="hidden" value="<?php echo $assignment_id;?>" name="assignment_id">
+		<input type="hidden" id="timezone" name="timezone">
 		<br>
 		<p><button tabindex="2" class="btn btn-icon btn-primary glyphicons lightbulb" type="submit" value="Assign"><i></i>Begin</button></p>
 	</form>
@@ -86,5 +88,6 @@ $(document).ready(function() {
  <?php  $this->load->view('/components/js_includes') ?>
  <script src="/common/bootstrap/js/bootstrap.min.js"></script>
 <script src="/common/theme/scripts/demo/common.js?1384198042"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
 </body>
 </html>

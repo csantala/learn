@@ -3,7 +3,7 @@
 class Test extends CI_Controller {
 
 	public function index() {
-		ds( $_COOKIE['timezone']);
+		ds( $_COOKIE);
 	}
 
 

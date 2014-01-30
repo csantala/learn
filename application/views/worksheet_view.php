@@ -48,7 +48,7 @@
     <script src="/common/theme/scripts/plugins/system/less.min.js"></script>
 
 </head>
-<body>
+<body data-timezone="<?php echo $timezone;?>">
 		<h4 id="assignment_header"></h4>
 		<h5><?php echo $course . " " . $instructor;?></h5>
 		<table>

@@ -23,13 +23,13 @@ class Home extends CI_Controller {
 			$student_meta = $this->Synopsis_model->get_student($synopsis_id);
 
 			$steps = $this->Step_model->get_steps_with_notes($assignment_id, $synopsis_id);
-//ds($steps);
+
 			// get synopsis for steps
 			$rows = array();
 			foreach ($steps as $step) {
 				$rows[] = $this->Task_model->tasks($assignment_id,$step->id);
 			}
-
+//ds($rows);
 			// get marked meta if any
 			$data = compact('assignment_id', 'synopsis_id');
 			$marked_meta = $this->Synopsis_model->get_mark($data);
@@ -103,7 +103,8 @@ class Home extends CI_Controller {
 		$view_vars = array(
 			'assignment_id' => $_POST['assignment_id'],
 			'step_id' => $_POST['step_id'],
-			'rows' => $rows
+			'rows' => $rows,
+            'timezone' => $_POST['timezone']
 		);
 
 		$this->load->view('/components/ajax/synopsis_editor', $view_vars);

@@ -93,9 +93,11 @@ $(document).ready(function() {
         $(this).unbind('click');
         var assignment_id = $(this).data("assignment_id");
         var step_id = $(this).data("step_id");
+        var timezone = $('body').data("timezone");
         $(this).load("/home/load_editor",{
             assignment_id: assignment_id,
-            step_id: step_id
+            step_id: step_id,
+            timezone: timezone
         });
     });
 

@@ -1,3 +1,4 @@
+<?php date_default_timezone_set($timezone); ?>
 	<script type="text/javascript" src="/js/script.js"></script>
 				<form class="synopsis">
 		                <div class="rows" data-assignment_id="<?php echo $assignment_id?>"  data-step_id="<?php echo $step_id?>" data-session="0">
