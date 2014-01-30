@@ -73,16 +73,19 @@ $(document).ready(function() {
     last_time = $('.rowx').last().find('span').data("time");
 
     elapsed_time(last_time, session);
-
+    assignment_id = $('.rows').data("step_id");
+      $(".rows").on('blur', '.rowx', (function(e){
+        var step_id = $(this).find('input:text').data('step_id');
+        var task = $(this).find('input:text').val();
+        var time = $(this).find('span').data("time");
+        i = $(this).find('input:text').data("i");
+        if (task != '') { write_task('/synopsis/update_task', i, assignment_id, session, task, time);}
+       }));
     // navigation and row generation
     $(".rows").on('keydown', '.rowx', (function(e) {
-            $('#getlost').fadeOut("42");
-
-        // project identifier
-        assignment_id = $('.rows').data("step_id");
-
         // current row
         i = $(this).find('input:text').data("i");
+         var step_id = $(this).find('input:text').data('step_id');
         // keypress handling
         switch(e.which) {
 
@@ -142,7 +145,6 @@ $(document).ready(function() {
                 var time = moment().format('X');
                 var et = elapsed_time(moment().format('X'), session);
                 // save position (i) and task
-                var step_id = $(this).find('input:text').data('step_id');
                 write_task('/synopsis/task', i, step_id, session, task, time, et);
                 $(this).next('tr').find('input:text').focus();
                 elapsed_time(moment().format('X'), session);

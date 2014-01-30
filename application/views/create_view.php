@@ -80,7 +80,9 @@ $(document).ready(function () {
 	</script>
 </head>
 <body>
-	<h4 id="assignment_header"></h4>
+	<h4 id="assignment_header">LEARN 1.0</h4>
+
+
 	<br>
 	<form id="assignment_form" action="/create" method="post">
 		<p><input tabindex="1" type="text" class="span8 course" placeholder="course" name="course"></p>
