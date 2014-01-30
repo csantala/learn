@@ -79,7 +79,7 @@ $(document).ready(function() {
             $('#getlost').fadeOut("42");
 
         // project identifier
-        project_id = $('.rows').data("step_id");
+        assignment_id = $('.rows').data("step_id");
 
         // current row
         i = $(this).find('input:text').data("i");
@@ -90,24 +90,24 @@ $(document).ready(function() {
             case 40:
                 var task = $(this).find('input:text').val();
                 var time = $(this).find('span').data("time");
-                write_task('/synopsis/update_task', i, project_id, session, task, time);
+                write_task('/synopsis/update_task', i, assignment_id, session, task, time);
                 $(this).next('tr').find('input:text').focus();
             break;
             // cursor up, nav up
             case 38:
                 var task = $(this).find('input:text').val();
                 var time = $(this).find('span').data("time");
-                write_task('/synopsis/update_task', i, project_id, session, task, time);
+                write_task('/synopsis/update_task', i, assignment_id, session, task, time);
                 $(this).prev('tr').find('input:text').focus();
             break;
             // insert
             // deactivated
             case 000192:
                 e.preventDefault();
-                $('<tr class="rowx"><td class="heading"></td><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm a') + '</span></td><td><input maxlength="300" class="task" type="text" /></td></tr>').insertBefore($(this));
+                $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm a') + '</span></td><td><input maxlength="300" class="task" type="text" /></td></tr>').insertBefore($(this));
                 update_inputs();
                 var time = $(this).find('span').data("time");
-                write_task('/synopsis/insert_task', i, project_id, session, '', time);
+                write_task('/synopsis/insert_task', i, assignment_id, session, '', time);
                 $(this).prev('div').find('input:text').focus();
                 elapsed_time(moment().format('X'), session);
             break;
@@ -127,7 +127,7 @@ $(document).ready(function() {
                 }
                 $(this).remove();
                 update_inputs();
-                write_task('/synopsis/delete_task', i, project_id, session, null);
+                write_task('/synopsis/delete_task', i, assignment_id, session, null);
                 elapsed_time(moment().format('X'), session);
             break;
             // enter key handling
@@ -135,13 +135,13 @@ $(document).ready(function() {
                 e.preventDefault();
                 var next = i + 1;
                 if ($(this).next('tr').find('input:text').length == 0) {
-                    $('<tr class="rowx"><td class="heading">' + next + '</td><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm a') + '</span></td><td><input maxlength="300" class="task" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
+                    $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm a') + '</span></td><td><input maxlength="300" class="task" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
                 }
                 var task = $(this).find('input:text').val();
                 var time = moment().format('X');
                 var et = elapsed_time(moment().format('X'), session);
                 // save position (i) and task
-                write_task('/synopsis/task', i, project_id, session, task, time, et);
+                write_task('/synopsis/task', i, assignment_id, session, task, time, et);
                 $(this).next('tr').find('input:text').focus();
                 elapsed_time(moment().format('X'), session);
             break;
@@ -150,10 +150,10 @@ $(document).ready(function() {
 
     // inline edit objective ajax
     $("#set_objective").click(function(){;
-        var project_id = $(this).data("project_id");
+        var assignment_id = $(this).data("assignment_id");
         var objective = $(this).data("objective");
         $(".edit_objective").load("/home/edit_objective",{
-                project_id: project_id,
+                assignment_id: assignment_id,
                 objective: objective
         });
     });
@@ -161,22 +161,22 @@ $(document).ready(function() {
     // submit
     $(".inline_edit").focusout(function(e) {
         var objective = $(".input_edit").val();
-        var project_id =  $(".project_id").val();
+        var assignment_id =  $(".assignment_id").val();
          $(".edit_objective").load("/home/update_objective",{
             objective:objective,
-            project_id: project_id
+            assignment_id: assignment_id
         });
     });
 
     // submit
     $(".inline_edit").keydown(function(e) {
         var objective = $("input").val();
-        var project_id =  $(this).find('input[type="hidden"][name="project_id"]').val();
+        var assignment_id =  $(this).find('input[type="hidden"][name="assignment_id"]').val();
         if (e.keyCode == 13) {
              e.preventDefault();
              $(".edit_objective").load("/home/update_objective",{
                 objective:objective,
-                project_id: project_id
+                assignment_id: assignment_id
              });
         }
     });
@@ -229,14 +229,15 @@ function update_inputs() {
     });
 }
 
-function write_task(url, i, project_id, session, task, time, elapsed_time) {
+function write_task(url, i, assignment_id, session, task, time, elapsed_time) {
     var assignment_id = $('.rows').data("assignment_id");
+    var step_id = $('.rows').data("step_id");
     $.ajax({
         type: "POST",
         url: url,
         data: {
             position : i,
-            project_id: project_id,
+            step_id: step_id,
             session: session,
             task: task,
             time: time,

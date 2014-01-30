@@ -35,7 +35,7 @@ class Synopsis_model extends CI_Model {
 
 	public function update_synopsis() {
 		$data = array(
-			'synopsis_id' => $_POST['project_id'],
+			'synopsis_id' => $_POST['step_id'],
 			'assignment_id' => $_POST['assignment_id'],
 		);
 

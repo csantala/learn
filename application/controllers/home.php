@@ -22,13 +22,20 @@ class Home extends CI_Controller {
 			if ($assignment == '') { show_404(); }
 			$student_meta = $this->Synopsis_model->get_student($synopsis_id);
 
-			$steps = $this->Step_model->get_steps_with_notes($assignment_id, $synopsis_id);
+			$steps = $this->Step_model->get_steps_with_notes($assignment_id, $assignment_id);
+
+			// get synopsis for steps
+			$rows = array();
+			foreach ($steps as $step) {
+				$rows[] = $this->Task_model->tasks($assignment_id,$step->id);
+			}
 
 			// get marked meta if any
 			$data = compact('assignment_id', 'synopsis_id');
 			$marked_meta = $this->Synopsis_model->get_mark($data);
 
            	$view_data = array(
+           		'rows' => $rows,
            		'marked_meta' => $marked_meta,
            		'is_instructor' => $is_instructor,
            		'dashboard_id' => $dashboard_id,
@@ -47,7 +54,7 @@ class Home extends CI_Controller {
                 'student_name' => $student_meta->student_name
             );
             $this->load->view('editor_view', $view_data);
-           // $this->load->view('worksheet_view', $view_data);
+            //$this->load->view('worksheet_view', $view_data);
         } else {
 			show_404();
         	// TODO: generate proper id
@@ -77,4 +84,28 @@ class Home extends CI_Controller {
         $this->Objectives_model->update_objective($data);
         $this->load->view('/components/ajax/updated_objective', $_POST);
     }
+
+	// synopsis editor ajax
+	public function load_editor() {
+    	$rows = $this->Task_model->tasks($_POST['assignment_id'],$_POST['step_id']);
+		// create new synopses if !$rows
+		if (empty($rows)) {
+       	    $rows[] = (object)array(
+                'step_id' => $_POST['step_id'],
+                'assignment_id' => $_POST['assignment_id'],
+                'position' => 1,
+                'session' => time(),
+                'time' => time(),
+                'task' => ''
+            );
+		}
+
+		$view_vars = array(
+			'assignment_id' => $_POST['assignment_id'],
+			'step_id' => $_POST['step_id'],
+			'rows' => $rows
+		);
+
+		$this->load->view('/components/ajax/synopsis_editor', $view_vars);
+	}
 }

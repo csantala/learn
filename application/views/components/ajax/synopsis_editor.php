@@ -1,5 +1,5 @@
 	<script type="text/javascript" src="/js/script.js"></script>
-				<form id="synopsis">
+				<form class="synopsis">
 		                <div class="rows" data-assignment_id="<?php echo $assignment_id?>"  data-step_id="<?php echo $step_id?>" data-session="0">
 		                    <table class="ExcelTable2013">
 		                        <tr style="color:#bbb">
@@ -12,7 +12,7 @@
 		                                $i = 1;
 		                                foreach ($rows as $row) { ?>
 		                                    <tr class="rowx">
-		                                        <td class="heading"><?php echo $i; $i++; ?></td>
+
 		                                        <td class="start">
 		                                            <span data-time="<?php echo $row->time ?>"><?php echo date('g:i a', $row->time);?></span>
 		                                        </td>

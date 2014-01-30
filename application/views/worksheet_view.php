@@ -96,7 +96,7 @@
 							<span class="row<?php echo $step->id;?>"><input id="step" class="span7 steps" tabindex="" type="text" readonly value="<?php echo $step->step;?>" style="color:#000;" />&nbsp;
 						</td>
 						<td class="checkbox c<?php echo $step->id;?>">
-							<a class="glyphicons <?php echo $status;?> begin begin<?php echo $step->id;?>" data-s="<?php echo $step->id;?>" data-status="<?php echo $step->status;?>"><i></i></a></span>
+							<a class="glyphicons <?php echo $status;?> begin begin<?php echo $step->id;?>" data-step_id="<?php echo $step->id;?>" data-status="<?php echo $step->status;?>"><i></i></a></span>
 						</td>
 					</div>
 					</tr>
@@ -105,7 +105,23 @@
 						</td>
 						<td colspan="2">
 							<div class="synopsis" data-assignment_id="<?php echo $assignment_id;?>" data-step_id="<?php echo $step->id;?>">
-								steps!
+								<table>
+								<?php
+		                               if (count($rows[$s-1]) > 0) {
+		                                foreach ($rows[$s-1] as $row) { ?>
+		                                    <tr class="rowx">
+		                                        <td class="start">
+		                                            <span data-time="<?php echo $row->time ?>"><?php echo date('g:i a', $row->time);?></span>
+		                                        </td>
+		                                        <td>
+		                                            <?php echo $row->task; ?>
+		                                        </td>
+		                                    </tr>
+		                                <?php } ?>
+		                            <?php } else { ?>
+		                            	<i>add synopsis</i>
+		                            <?php } ?>
+		                            </table>
 							</div>
 						</td>
 					</tr>
