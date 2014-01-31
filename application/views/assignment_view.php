@@ -72,7 +72,7 @@ $(document).ready(function() {
 
 		<h5>STEPS</h5>
 		<?php foreach ($steps as $step) { ?>
-		<p><input id="step" class="span9" tabindex="3" type="text" readonly value="<?php echo $step->step;?>" /></p>
+		<p><input id="step" class="span9" tabindex="3" type="text" readonly value="<?php echo quotes_to_entities($step->step);?>" /></p>
 		<?php } ?>
 		<input type="hidden" value="<?php echo $synopsis_url?>" name="synopsis_url">
 		<input type="hidden" value="<?php echo $synopsis_id;?>" name="synopsis_id">
