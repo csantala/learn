@@ -45,6 +45,7 @@ class Task_model extends CI_Model {
 	}
 
 	public function update_task() {
+		if ($_POST['task'] == '') { return; }
 		$query = $this->db->get_where('task', array(
 			'session' => $_POST['session'],
 			'assignment_id' => $_POST['assignment_id'],

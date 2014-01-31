@@ -1,13 +1,10 @@
-$(document).ready(function() {
-
-    // inline edit objective ajax
-    $(".task").click(function(){
-        var task_id = $(this).data("task_id");
-        $(".comment"+task_id).load("/comment/add_comment",{
-                task_id: task_id
-        });
+    $('.confirm').click(function(e){
+         var name = confirm('Submit this to your instructor?');
+         if (name == false) { return false; }
     });
 
+
+$(document).ready(function() {
     // submit comment
     $(".comment").keydown(function(e) {
         var task_id = $(this).data("task_id");
@@ -21,20 +18,10 @@ $(document).ready(function() {
         }
     });
 
-    // hide footer on usage
-     $('#contentx').click(function(){
-	   $('#getlost').fadeOut("42");
-	});
-
     //
     $("#begin").submit(function(e) {
         var student_name = $('#student_name').val();
         if (student_name == '') { alert('please enter student name'); return false; }
-    });
-
-    $('.confirm').click(function(){
-         var name = confirm('Submit this to your instructor?');
-         if (name == false) { return false; }
     });
 
     // send
@@ -57,7 +44,7 @@ $(document).ready(function() {
                         hash: hash,
                     }
                 }).done(function( msg ) {
-                    console.log(msg);
+
                 });
             return true;
        // }
@@ -75,41 +62,41 @@ $(document).ready(function() {
     elapsed_time(last_time, session);
     assignment_id = $('.rows').data("step_id");
 
-     $(".rows").on('blur', '.rowx', (function(e){
-        var step_id = $(this).find('input:text').data('step_id');
-        var task = $(this).find('input:text').val();
-        var time = $(this).find('span').data("time");
-        i = $(this).find('input:text').data("i");
-        if (task != '') { write_task('/synopsis/update_task', i, step_id, session, task, time);}
-       }));
-
+    $(".rows").on('blur', '.task', (function(e) {
+        // current row
+        var i = $(this).data("i");
+        var task = $(this).val();
+        var time = $(this).data("time");
+        var step_id = $(this).data('step_id');
+        write_task('/synopsis/update_task', i, step_id, session, task, time);
+   }));
+        // keypress handling
     // navigation and row generation
     $(".rows").on('keydown', '.rowx', (function(e) {
         // current row
-        i = $(this).find('input:text').data("i");
+
+        var i = $(this).find('input:text').data("i");
+        var task = $(this).find('input:text').val();
+        var time = $(this).find('span').data("time");
         var step_id = $(this).find('input:text').data('step_id');
         // keypress handling
-        switch(e.which) {
 
+        switch(e.which) {
             // cursor down, create new row or nav to next row
             case 40:
-                var task = $(this).find('input:text').val();
-                var time = $(this).find('span').data("time");
-                write_task('/synopsis/update_task', i, assignment_id, session, task, time);
+                //write_task('/synopsis/update_task', i, assignment_id, session, task, time);
                 $(this).next('tr').find('input:text').focus();
             break;
             // cursor up, nav up
             case 38:
-                var task = $(this).find('input:text').val();
-                var time = $(this).find('span').data("time");
-                write_task('/synopsis/update_task', i, assignment_id, session, task, time);
+                //write_task('/synopsis/update_task', i, assignment_id, session, task, time);
                 $(this).prev('tr').find('input:text').focus();
             break;
             // insert
             // deactivated
             case 000192:
                 e.preventDefault();
-                $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm') + '</span>:</td><td><input maxlength="300" class="task span6" type="text" /></td></tr>').insertBefore($(this));
+                $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm') + '</span>:</td><td><input data-time="'+ moment().format('X') + '" maxlength="300" class="task span6" type="text" /></td></tr>').insertBefore($(this));
                 update_inputs();
                 var time = $(this).find('span').data("time");
                 write_task('/synopsis/insert_task', i, assignment_id, session, '', time);
@@ -139,15 +126,13 @@ $(document).ready(function() {
             case 13:
                 e.preventDefault();
                 var next = i + 1;
-                var step_id = $(this).find('input:text').data('step_id');
                 if ($(this).next('tr').find('input:text').length == 0) {
-                    $('<tr class="rowx"><td class="start">'+next+'. <span data-time="'+ moment().format('X') + '">' + moment().format('h:mm:ss') + '</span></td><td><input maxlength="300" data-step_id="'+step_id+'" class="task span6" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
+                    $('<tr class="rowx"><td class="start">'+next+'. <span data-time="'+ moment().format('X') + '">' + moment().format('h:mm:ss') + '</span></td><td><input maxlength="300" data-time="'+ moment().format('X') + '" data-step_id="'+step_id+'" class="task span6" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
                 }
-                var task = $(this).find('input:text').val();
                 var time = moment().format('X');
                 var et = elapsed_time(moment().format('X'), session);
                 // save position (i) and task
-                write_task('/synopsis/task', i, step_id, session, task, time, et);
+                //write_task('/synopsis/task', i, step_id, session, task, time, et);
                 $(this).next('tr').find('input:text').focus();
                 elapsed_time(moment().format('X'), session);
             break;
@@ -220,9 +205,6 @@ $(document).ready(function() {
     });
 });
 
-
-
-
 // reorder all ids upon insert or del
 function update_inputs() {
     "use strict";
@@ -269,3 +251,4 @@ function elapsed_time(time, session) {
     $("#elapsed_time").text(elapsed_time);
     return elapsed_time;
 }
+

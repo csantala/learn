@@ -110,6 +110,7 @@
 		                               if (count($rows[$s-1]) > 0) {
 		                               	$i = 1;
 		                                foreach ($rows[$s-1] as $row) { ?>
+		                                	<?php if ($row->task != '') { ?>
 		                                    <tr class="rowx">
 		                                        <td class="start">
 		                                            <?php echo $i; $i++;?>. <span data-time="<?php echo $row->time ?>"><?php echo date('g:i:s', $row->time);?></span>
@@ -118,6 +119,7 @@
 		                                            &nbsp;&nbsp;<?php echo quotes_to_entities($row->task); ?>
 		                                        </td>
 		                                    </tr>
+		                                   	<?php } ?>
 		                                <?php } ?>
 		                                <tr><td>&nbsp;</td></tr>
 		                            <?php } else { ?>
@@ -137,7 +139,7 @@
 	        			<?php if ($is_instructor) {?>
 	        			<!--input type="submit" class="btn btn-block btn-success confirm" value="     UPDATE ASSIGNMENT     "-->
 	        			<?php } else { ?>
-	        			<input type="submit" class="btn btn-block btn-success confirm" value="     SUBMIT ASSIGNMENT     ">
+	        			<input type="submit" class="btn btn-block btn-success" value="     SUBMIT ASSIGNMENT     ">
 	        			<?php } ?>
 	        			</form>
 	        		</div>
