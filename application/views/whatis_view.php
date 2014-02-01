@@ -63,9 +63,9 @@
                     	<p><a href="<?php echo site_url();?>create">Create an assignment</a>, send its Assignment URL to your students, and then monitor their work from your dashboard.</p>
                     	<p>The Assignment URL will provide each student with a unique worksheet of which you may monitor and mark.</p>
                     	<h5>Demo</h5>
-                    	<p>Example A: <a href="http://learn.ablitica.com/dashboard/WdvgRgj/b7Pgav3" >Instructor Dashboard</a></p>
-                    	<p>Example B: <a href="http://learn.ablitica.com/assignment/b7Pgav3" target="_blank">Assigment URL for Students</a></p>
-                    	<p>Example C: <a href="http://learn.ablitica.com/home/b7Pgav3/Y8vdwxj" target="_blank">Student Worksheet</a></p>
+                    	<p>Example A: <a href="http://learn.ablitica.com/dashboard/yd7dJ9l/Y8v8rQj">Instructor Dashboard</a></p>
+                    	<p>Example B: <a href="http://learn.ablitica.com/assignment/Y8v8rQj" target="_blank">Assigment URL for Students</a></p>
+                    	<p>Example C: <a href="http://learn.ablitica.com/home/Y8v8rQj/27w73YD" target="_blank">Student Worksheet</a></p>
  					 </div>
                 </div>
             </div>

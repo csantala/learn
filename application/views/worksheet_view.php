@@ -1,7 +1,7 @@
 <?php
 	date_default_timezone_set($timezone);
-	$synopsis_tip = "Click each checkbox for each completed step. Document the tasks in the notes fields.";
-	$steps_tip = "Click 'add synopsis' to document each task you take to complete a step.  Click the checkbox when the step is complete. ";
+	$synopsis_tip = "Log each task you take when working on steps.  Checkmark the step when finished.";
+	$steps_tip = "Click 'add synopsis' to log your tasks.";
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -57,7 +57,7 @@
 				<td>
 					<div id="student_name_container">
 						<p>
-							<h5>STUDENT&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip;?>">?</a></h5>
+							<h5>STUDENT&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="top" data-original-title="<?php echo $synopsis_tip;?>">?</a></h5>
         					<input id="student_name" value=" <?php echo $student_name; ?>" name="student_name" class="span3 student_name" type="text" readonly style="color:#000000" />
      				   </p>
      			   <div>
@@ -79,7 +79,7 @@
 				<h5>OBJECTIVE</h5>
 				<p><textarea tabindex="1" class="span7 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
 
-				<h5>STEPS&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $steps_tip;?>">?</a></h5>
+				<h5>STEPS&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="top" data-original-title="<?php echo $steps_tip;?>">?</a></h5>
 				<table>
 					<?php $s=1; foreach ($steps as $step) { ?>
 
