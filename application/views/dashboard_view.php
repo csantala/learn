@@ -91,7 +91,7 @@
 		  <table id="scanner_data" class="dynamicTable table table-striped table-bordered table-condensed dataTable">
 		  	<tr>
 				<th>Worksheet&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="top" data-original-title="<?php echo $student_tip;?>">?</a></th>
-				<!--th>Elapsed Time</th-->
+				<th>Elapsed Time</th>
 				<th>Status</th>
 				<th>Grade</th>
 				<th></th>
@@ -101,7 +101,7 @@
 					foreach($scanner_data as $data) { //ds($data,1);?>
 			<tr>
 				<td><a target="_blank" href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>"><?php echo $data->student_name;?></a></td>
-				<!--td><?php echo $data->elapsed_time;?></td-->
+				<td><?php echo $data->elapsed_time;?></td>
 				<td><?php echo $data->status;?></td>
 				<td><?php echo $data->mark;?></td>
 				<td><a target="_blank" href="/home/<?php echo $data->assignment_id;?>/<?php echo $data->synopsis_id;?>/<?php echo $dashboard_id;?>">mark assignment</a></td>

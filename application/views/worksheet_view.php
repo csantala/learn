@@ -108,12 +108,12 @@
 								<table>
 								<?php
 		                               if (count($rows[$s-1]) > 0) {
-		                               	$i = 1;
+
 		                                foreach ($rows[$s-1] as $row) { ?>
 		                                	<?php if ($row->task != '') { ?>
 		                                    <tr class="rowx">
 		                                        <td class="start">
-		                                            <?php echo $i; $i++;?>. <span data-time="<?php echo $row->time ?>"><?php echo date('g:i:s', $row->time);?></span>
+		                                             <span data-time="<?php echo $row->time ?>"><?php echo date('g:i:s', $row->time);?></span>
 		                                        </td>
 		                                        <td>
 		                                            &nbsp;&nbsp;<?php echo quotes_to_entities($row->task); ?>
@@ -123,7 +123,16 @@
 		                                <?php } ?>
 		                                <tr><td>&nbsp;</td></tr>
 		                            <?php } else { ?>
-		                            	<i>add synopsis</i>
+		                            	<span class="synopsis">
+		                            	<tr class="rowx">
+		                                        <td class="start">
+		                                            <span></span>
+		                                        </td>
+		                                        <td>
+		                                            <i>add synopsis</i>
+		                                        </td>
+		                                    </tr>
+		                                </span>
 		                            <?php } ?>
 		                            </table>
 							</div>

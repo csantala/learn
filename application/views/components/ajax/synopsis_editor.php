@@ -9,11 +9,10 @@
 		                            <span class="details pull-right">elapsed time: <span id="elapsed_time"></span>&nbsp;</span></th-->
 		                        </tr>
 		                            <?php
-		                                $i = 1;
 		                                foreach ($rows as $row) { ?>
 		                                    <tr class="rowx">
 		                                        <td class="start">
-		                                            <?php echo $i; $i++;?>. <span data-time="<?php echo $row->time ?>"><?php echo date('g:i:s', $row->time);?></span>
+		                                        	<span data-time="<?php echo $row->time ?>"><?php echo date('g:i:s', $row->time);?></span>
 		                                        </td>
 		                                        <td>
 		                                            <input data-time="<?php echo $row->time ?>" data-step_id="<?php echo $step_id?>" maxlength="300" class="task span6" type="text" data-i="<?php echo $row->position; ?>" <?php if ($row->task != '') { ?> value="<?php echo quotes_to_entities($row->task); ?>"<?php } ?>/>

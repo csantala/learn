@@ -92,7 +92,7 @@ $(document).ready(function () {
 		<div id="objectives">
 			<h5>STEPS&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $step_tip;?>">?</a></h5>
 			<?php for ($i = 1; $i<=5; $i++) {?>
-			<p><?php echo $i;?>. <input tabindex="<?php echo $i + 3; ?>" data-i="<?php echo $i;?>" id="obj_row1" name="step<?php echo $i;?>"class="span8 rowx" type="text" value=""></p>
+			<p><?php echo $i;?>. <input tabindex="<?php echo $i + 3; ?>" data-i="<?php echo $i;?>" name="step<?php echo $i;?>"class="span8 rowx" type="text" value=""></p>
 			<?php } ?>
 			<button class="btn add_button">Add Step</button>
 		</div>

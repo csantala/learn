@@ -22,6 +22,13 @@ class Task_model extends CI_Model {
 		return $data;
 	}
 
+	public function all_tasks($synopsis_id) {
+		$this->db->where('synopsis_id', $synopsis_id);
+		$query = $this->db->get('task');
+		$data = $query->result();
+		return $data;
+	}
+
 	public function insert_task() {
 		$data = array(
 			'assignment_id' => $_POST['assignment_id'],

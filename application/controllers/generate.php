@@ -16,30 +16,31 @@ class Generate extends CI_Controller {
 		$stats = $this->tracker_lib->track('generate report');
 		$this->db->insert('tracker', $stats);
 
-		$project_id = $_POST['pid'];
-		$asshash = $_POST['aid'];
-		//ds($_POST,1);
-		// update notes in db
+		$synopsis_id = $_POST['pid'];
+		$assignment_id = $_POST['aid'];
+
 		$this->Note_model->update_notes($_POST);
 
-		$student_meta = $this->Synopsis_model->get_student($project_id);
+		$student_meta = $this->Synopsis_model->get_student($synopsis_id);
 		$student_name = $student_meta->student_name;
 
 	    $elapsed_time = 0;
         // generate elapsed time
-	    // $synopsis = $this->Synopsis_model->synopsis($project_id);
-		// if (! empty($synopsis)) {
-		// 	$start = $synopsis[0]->time;
-		//	$end = $synopsis[count($synopsis) - 1]->time;
-		//	$elapsed_time = elapsed_time($end - $start);
-		// } else {
-		// 	$elapsed_time = 0;
-		 //}
-		// TODO: fix this
-		$timezone = isset($_COOKIE['timezone']) ? $_COOKIE['timezone'] : 'America/Vancouver';
+	    $tasks = $this->Task_model->all_tasks($synopsis_id);
+
+		 if (! empty($tasks)) {
+		 	$start = $tasks[0]->time;
+			$end = $tasks[count($tasks) - 1]->time;
+			$elapsed_time = elapsed_time($end - $start);
+		 } else {
+		 	$elapsed_time = 0;
+		 }
+
+		$timezone = $student_meta->timezone;
         // create report for project_id
-        $data = compact('project_id', 'elapsed_time', 'project_id', 'timezone', 'asshash', 'student_name');
-        $this->Report_model->create_report($data);
+        $data = compact('synopsis_id', 'elapsed_time', 'assignment_id');
+
+        $this->Synopsis_model->update_synopsis2($data);
 
 		$assignment = $this->Objectives_model->get_assignment($asshash);
 

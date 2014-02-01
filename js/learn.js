@@ -4,7 +4,8 @@ $(document).ready(function() {
         e.preventDefault();
         var i = $('.rowx').last().data("i");
         var x = i + 1;
-        $('<p>' + x + ': <input tabindex="' + x + '" data-i="' + x + '" class="span8 rowx" id="obj_row' + x + '" name="step' + x + '" type="text"></p>').insertBefore($(this));
+        var tab = i + 5;
+        $('<p>' + x + ': <input tabindex="' + tab + '" data-i="' + x + '" class="span8 rowx" id="obj_row' + x + '" name="step' + x + '" type="text"></p>').insertBefore($(this));
         $('#obj_row' + x).focus();
     });
 

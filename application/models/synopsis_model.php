@@ -10,7 +10,7 @@ class Synopsis_model extends CI_Model {
 	}
 
 	public function synopsis($project_id) {
-		$this->db->where('project_id', $project_id);
+		$this->db->where('synopsis_id', $project_id);
 	//	$this->db->where('user_id', $this->session->userdata('user_id'));
 	//	$this->db->where('session', $session);
 		$this->db->order_by("position", "asc");
@@ -51,6 +51,19 @@ class Synopsis_model extends CI_Model {
 		} else {
 			$this->db->insert('synopsis', $data);
 		}
+	}
+
+	// TODO: remove this and optimize
+	public function update_synopsis2($data) {
+		extract($data);
+		$query = array(
+			'synopsis_id' => $synopsis_id,
+			'assignment_id' => $assignment_id
+		);
+
+		$this->db->where($query);
+		$this->db->update('synopsis', array('elapsed_time' => $elapsed_time));
+		$this->db->update('synopsis', array('status' => 'submitted'));
 	}
 
 	public function label_synopsis($data) {
