@@ -1,6 +1,7 @@
 <?php
 	date_default_timezone_set($timezone);
 	$synopsis_tip = "Click each checkbox for each completed step. Document the tasks in the notes fields.";
+	$steps_tip = "Click 'add synopsis' to document each task you take to complete a step.  Click the checkbox when the step is complete. ";
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -56,7 +57,7 @@
 				<td>
 					<div id="student_name_container">
 						<p>
-							<h5>STUDENT</h5>
+							<h5>STUDENT&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $synopsis_tip;?>">?</a></h5>
         					<input id="student_name" value=" <?php echo $student_name; ?>" name="student_name" class="span3 student_name" type="text" readonly style="color:#000000" />
      				   </p>
      			   <div>
@@ -78,7 +79,7 @@
 				<h5>OBJECTIVE</h5>
 				<p><textarea tabindex="1" class="span7 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
 
-				<h5>STEPS</h5>
+				<h5>STEPS&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $steps_tip;?>">?</a></h5>
 				<table>
 					<?php $s=1; foreach ($steps as $step) { ?>
 
@@ -129,7 +130,8 @@
 		                                            <span></span>
 		                                        </td>
 		                                        <td>
-		                                            <i>add synopsis</i>
+		                                            <span class="label add_synopsis" style="cursor:pointer">add synopsis</span><br><br>
+
 		                                        </td>
 		                                    </tr>
 		                                </span>
@@ -141,6 +143,7 @@
 					<tr><td colspan="2">&nbsp;</td></tr>
 				<?php $s++; }?>
 				</table>
+
 		        <div class="span6">
 	        		<div id="done">
 	        			<input type="hidden" name="pid" value="<?php echo $synopsis_id;?>">
@@ -166,16 +169,11 @@
 		        	</form>
 		      	</div>
 		      	<?php } ?>
-<div id="getlost">
-        <?php // $this->load->view('/components/footer') ?>
-</div>
 
-    <?php $this->load->view('/components/themer') ?>
+	<br /><br />
+
     <?php $this->load->view('/components/js_includes') ?>
-      <script src="/common/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/js/bookmark.js"></script>
-    <script src="/common/theme/scripts/demo/common.js?1384198042"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+          <script src="/common/bootstrap/js/bootstrap.min.js"></script>
 
 </body>
 </html>

@@ -94,7 +94,6 @@
 				<th>Elapsed Time</th>
 				<th>Status</th>
 				<th>Grade</th>
-				<th></th>
 			</tr>
 			<?php
 				if (! empty($scanner_data)) {

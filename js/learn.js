@@ -1,4 +1,8 @@
 $(document).ready(function() {
+    $(".add_synopsis").hover(function(e) {
+        $(this).toggleClass('label-inverse label-primary');
+    });
+
     // add steps
     $(".add_button").click(function(e) {
         e.preventDefault();
@@ -19,7 +23,7 @@ $(document).ready(function() {
           } else {
             status = 'open';
            // $('.note'+s).attr('readonly', false);
-          } console.log(step_id);
+          }
           $('.step_panel'+step_id).toggleClass('step_panel_sel step_panel_unsel');
           //$('<span>DONE</span>').insertAfter($(this));
 
@@ -36,7 +40,8 @@ $(document).ready(function() {
                         step_id: step_id
                     }
                 }).done(function( msg ) {
-                    $('.c' +step_id).effect('bounce');
+                    //  $('.c'+step_id).effect("bounce");
+
                 });
             return true;
     });
