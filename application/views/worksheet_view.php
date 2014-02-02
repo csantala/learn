@@ -85,7 +85,7 @@
 							<?php echo $s;?>.
 						</td>
 						<td>
-						 <input class="span12 steps" type="text" readonly value="<?php echo quotes_to_entities($step->step);?>" style="color:#000;" />&nbsp;
+						 <input class="span11 steps" type="text" readonly value="<?php echo quotes_to_entities($step->step);?>" style="color:#000;" />&nbsp;
 						</td>
 						<td class="checkbox c<?php echo $step->id;?>">
 							<a class="glyphicons <?php echo $status;?> begin begin<?php echo $step->id;?>" data-s="<?php echo $s;?>" data-step_id="<?php echo $step->id;?>" data-status="<?php echo $step->status;?>"><i></i></a>
@@ -120,7 +120,7 @@
 		                                            <span></span>
 		                                        </td>
 		                                        <td>
-		                                            <span class="label add_synopsis" style="cursor:pointer">log tasks</span><br>
+		                                            <i class="cta">click to add synopsis</i>
 		                                        </td>
 		                                    </tr>
 

@@ -5,7 +5,7 @@
 <!--[if gt IE 8]> <html class="ie gt-ie8"> <![endif]-->
 <!--[if !IE]><!--><html><!-- <![endif]-->
 <head>
-    <title>Learn: Electronic Learning Aid</title>
+    <title>LEARN</title>
 
     <!-- Meta -->
     <meta charset="UTF-8" />
@@ -57,7 +57,7 @@
                 </div>
                 <div class="widget-body">
                     <div class="row-fluid">
-                    	<h5>Learning Electronic Assistant Response Networker</h5>
+                    	<h5>What is this?</h5>
                     	<p>This is a system which manages the creation, completion, and marking of an assignment conducted by an instructor with any number of students.<p>
                     	<h5>Usage</h5>
                     	<p><a href="<?php echo site_url();?>create">Create an assignment</a>, send its Assignment URL to your students, and then monitor their work from your dashboard.</p>

@@ -59,7 +59,7 @@
 		<h5>OBJECTIVE</h5>
 		<p>
 			<textarea style="vertical-align: middle; color:#000;" tabindex="1" class="span9 objective" name="objective"><?php echo $objective;?></textarea>
-			 <a id="upd_obj" data-dashboard_id="<?php echo $dashboard_id;?>">update</a>
+			 <a id="upd_obj" class="label add_synopsis" data-dashboard_id="<?php echo $dashboard_id;?>">update</a>
 		</p>
 <?php
 	if (count($steps) > 0) { ?>
@@ -71,7 +71,7 @@
 				foreach ($steps as $step) { ?>
 					<p>
 						<?php echo $i; $i++;?>. <input style="vertical-align: middle" class="span9 step<?php echo $step->id;?>" type="text" name="step<?php echo $step->id;?>" data-step_id="step<?php echo $step->id;?>" value="<?php echo quotes_to_entities($step->step);?>" >
-						 <a class="upd_step <?php echo $step->id;?>" data-step="<?php echo $step->id;?>">update</a>
+						 <a class="upd_step label add_synopsis <?php echo $step->id;?>" data-step="<?php echo $step->id;?>">update</a>
 					</p>
 				<?php }
 			?>

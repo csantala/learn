@@ -127,7 +127,7 @@ $(document).ready(function() {
                 e.preventDefault();
                 var next = i + 1;
                 if ($(this).next('tr').find('input:text').length == 0) {
-                    $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm:ss') + '</span></td><td><input maxlength="300" data-time="'+ moment().format('X') + '" data-step_id="'+step_id+'" class="task span11" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
+                    $('<tr class="rowx"><td class="start"><span data-time="'+ moment().format('X') + '">' + moment().format('h:mm:ss') + '</span></td><td><input maxlength="300" data-time="'+ moment().format('X') + '" data-step_id="'+step_id+'" class="task span10" type="text" data-i="' + next + '" /></td></tr>').insertAfter($(this));
                 }
                 var time = moment().format('X');
                 var et = elapsed_time(moment().format('X'), session);

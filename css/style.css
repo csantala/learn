@@ -234,3 +234,17 @@ input {
 #marked_meta h4 {
 	color:#000000 !important;
 }
+
+.add_synopsis {
+	font-size:10px;
+}
+
+.cta {
+	cursor:pointer;
+}
+
+.cta:hover {
+	color:#8ec657;
+}
+
+

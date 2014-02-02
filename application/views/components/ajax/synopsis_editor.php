@@ -15,7 +15,7 @@
 		                                        	<span data-time="<?php echo $row->time ?>"><?php echo date('g:i:s', $row->time);?></span>
 		                                        </td>
 		                                        <td>
-		                                            <input data-time="<?php echo $row->time ?>" data-step_id="<?php echo $step_id?>" maxlength="300" class="task span11" type="text" data-i="<?php echo $row->position; ?>" <?php if ($row->task != '') { ?> value="<?php echo quotes_to_entities($row->task); ?>"<?php } ?>/>
+		                                            <input data-time="<?php echo $row->time ?>" data-step_id="<?php echo $step_id?>" maxlength="300" class="task span10" type="text" data-i="<?php echo $row->position; ?>" <?php if ($row->task != '') { ?> value="<?php echo quotes_to_entities($row->task); ?>"<?php } ?>/>
 		                                        </td>
 		                                    </tr>
 		                            <?php } ?>
