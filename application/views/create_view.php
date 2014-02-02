@@ -18,16 +18,12 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
   	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
-    <!-- Excel-like css -->
-    <link href="/css/excel-2007.css" rel="stylesheet" type="text/css" />
 
     <!-- Bootstrap -->
     <link href="/common/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="/common/bootstrap/css/responsive.css" rel="stylesheet" />
 
   	<!-- Bootstrap Extended -->
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap-wysihtml5.css">
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<script src="/js/wysihtml5-0.3.0_rc2.js"></script>
 	<script src="/js/jquery-1.7.1.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
@@ -41,9 +37,6 @@
 
     <!-- Main Theme Stylesheet :: CSS -->
     <link href="/common/theme/css/style-light.css?1369753444" rel="stylesheet" />
-
-    <!-- Excel-like css -->
-    <link href="/css/excel-2007.css" rel="stylesheet" type="text/css" />
 
     <!-- General css -->
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
@@ -88,11 +81,11 @@ $(document).ready(function () {
 		<p><input tabindex="1" type="text" class="span8 course" placeholder="course" name="course"></p>
 		<p><input tabindex="2" type="text" class="span8 instructor" placeholder="instructor" name="instructor"></p>
 		<h5>OBJECTIVE&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $objective_tip;?>">?</a></h5>
-		<textarea tabindex="3" class="span8 objective" type="text" name="objective" style="color:#000"></textarea>
+		<textarea tabindex="3" class="span8 objective"  style="color:#000" name="objective"></textarea>
 		<div id="objectives">
 			<h5>STEPS&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $step_tip;?>">?</a></h5>
 			<?php for ($i = 1; $i<=5; $i++) {?>
-			<p><?php echo $i;?>. <input tabindex="<?php echo $i + 3; ?>" data-i="<?php echo $i;?>" name="step<?php echo $i;?>"class="span8 rowx" type="text" value=""></p>
+			<p><?php echo $i;?>. <input tabindex="<?php echo $i + 3; ?>" data-i="<?php echo $i;?>" name="step<?php echo $i;?>" class="span8 rowx" type="text" value=""></p>
 			<?php } ?>
 			<button class="btn add_button">Add Step</button>
 		</div>
@@ -109,9 +102,6 @@ $(document).ready(function () {
 
 <!-- Bootstrap -->
 <script src="/common/bootstrap/js/bootstrap.min.js"></script>
-
-<!-- Common Demo Script -->
-<script src="/common/theme/scripts/demo/common.js?1384198042"></script>
 
 </body>
 </html>

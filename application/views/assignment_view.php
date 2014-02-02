@@ -13,16 +13,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
-    <!-- Excel-like css -->
-    <link href="/css/excel-2007.css" rel="stylesheet" type="text/css" />
-
     <!-- Bootstrap -->
     <link href="/common/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="/common/bootstrap/css/responsive.css" rel="stylesheet" />
 
-  	<!-- Bootstrap Extended -->
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap-wysihtml5.css">
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<script src="/js/wysihtml5-0.3.0_rc2.js"></script>
 	<script src="/js/jquery-1.7.1.min.js"></script>
 	<script src="/js/bootstrap.min.js"></script>
@@ -36,9 +30,6 @@
 
     <!-- Main Theme Stylesheet :: CSS -->
     <link href="/common/theme/css/style-light.css?1369753444" rel="stylesheet" />
-
-    <!-- Excel-like css -->
-    <link href="/css/excel-2007.css" rel="stylesheet" type="text/css" />
 
     <!-- General css -->
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
@@ -62,17 +53,18 @@ $(document).ready(function() {
 	<h5><?php echo $course . " " . $instructor;?></h5>
 	<br>
 	<form id="begin" action="/create/begin" method="post">
-		<p>
+
 			<h5>STUDENT NAME</h5>
+			<p>
 			<input tabindex="1" id="student_name" name="student_name" class="span3" type="text" style="color:#000000" />
 		</p>
 
 		<h5>OBJECTIVE</h5>
-		<p><textarea tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
+		<p><textarea tabindex="1" class="span9 objective" name="objective" style="color:#000" readonly><?php echo $objective;?></textarea></p>
 
 		<h5>STEPS</h5>
 		<?php foreach ($steps as $step) { ?>
-		<p><input id="step" class="span9" tabindex="3" type="text" readonly value="<?php echo quotes_to_entities($step->step);?>" /></p>
+		<p><input class="span9 step" tabindex="3" type="text" readonly value="<?php echo quotes_to_entities($step->step);?>" /></p>
 		<?php } ?>
 		<input type="hidden" value="<?php echo $synopsis_url?>" name="synopsis_url">
 		<input type="hidden" value="<?php echo $synopsis_id;?>" name="synopsis_id">

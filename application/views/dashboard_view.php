@@ -21,16 +21,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
    	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
 
-    <!-- Excel-like css -->
-    <link href="/css/excel-2007.css" rel="stylesheet" type="text/css" />
-
     <!-- Bootstrap -->
     <link href="/common/bootstrap/css/bootstrap.css" rel="stylesheet" />
     <link href="/common/bootstrap/css/responsive.css" rel="stylesheet" />
-
-  	<!-- Bootstrap Extended -->
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap-wysihtml5.css">
-	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 
 	<script type="application/javascript" src="/js/wysihtml5-0.3.0_rc2.js" ></script>
 	<script type="application/javascript" src="/js/jquery-1.7.1.min.js"></script>
@@ -45,9 +38,6 @@
 
     <!-- Main Theme Stylesheet :: CSS -->
     <link href="/common/theme/css/style-light.css?1369753444" rel="stylesheet" />
-
-    <!-- Excel-like css -->
-    <link href="/css/excel-2007.css" rel="stylesheet" type="text/css" />
 
     <!-- General css -->
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
@@ -64,27 +54,28 @@
 <br>
    <h5>ASSIGNMENT URL&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-placement="bottom" data-original-title="<?php echo $assignment_tip;?>">?</a></h5>
    <p>
-  	 <input onclick="select()" class="span9"  style="color:#008000" type="text" value="<?php echo $assignment_url;?>">
+  	 <input onclick="select()" class="span9" style="color:#008000" type="text" value="<?php echo $assignment_url;?>">
   	</p>
 		<h5>OBJECTIVE</h5>
 		<p>
-			<textarea style="vertical-align: middle" tabindex="1" class="span9 objective" type="text" name="objective" style="color:#000"><?php echo $objective;?></textarea>
+			<textarea style="vertical-align: middle; color:#000;" tabindex="1" class="span9 objective" name="objective"><?php echo $objective;?></textarea>
 			 <a id="upd_obj" data-dashboard_id="<?php echo $dashboard_id;?>">update</a>
 		</p>
 <?php
 	if (count($steps) > 0) { ?>
 		<h5>STEPS</h5>
  <?php } ?>
-		<p>
+
 			<?php
 				$i = 1;
 				foreach ($steps as $step) { ?>
-					<p><?php echo $i; $i++;?>. <input style="vertical-align: middle" class="span9 step<?php echo $step->id;?>" type="text" name="step<?php echo $step->id;?>" data-step_id="step<?php echo $step->id;?>" value="<?php echo quotes_to_entities($step->step);?>" >
+					<p>
+						<?php echo $i; $i++;?>. <input style="vertical-align: middle" class="span9 step<?php echo $step->id;?>" type="text" name="step<?php echo $step->id;?>" data-step_id="step<?php echo $step->id;?>" value="<?php echo quotes_to_entities($step->step);?>" >
 						 <a class="upd_step <?php echo $step->id;?>" data-step="<?php echo $step->id;?>">update</a>
 					</p>
 				<?php }
 			?>
-		</p>
+
 <br>
 		<!--h4 id="progress">Progress&nbsp;&bull;&nbsp;<a href="#" data-toggle="tooltip" title="" data-original-title="<?php echo $progress_tip;?>">?</a></h4-->
 
