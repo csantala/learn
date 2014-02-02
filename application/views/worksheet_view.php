@@ -120,7 +120,7 @@
 		                                            <span></span>
 		                                        </td>
 		                                        <td>
-		                                            <span class="label add_synopsis" style="cursor:pointer">add synopsis</span><br>
+		                                            <span class="label add_synopsis" style="cursor:pointer">log tasks</span><br>
 		                                        </td>
 		                                    </tr>
 
