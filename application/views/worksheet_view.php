@@ -1,7 +1,7 @@
 <?php
 	date_default_timezone_set($timezone);
 	$synopsis_tip = "Log each task you take when working on steps.  Checkmark the step when finished.";
-	$steps_tip = "Click 'log tasks' to log your work.";
+	$steps_tip = "Click 'log tasks' to log your work. Click the green checkbox when complete.";
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]> <html class="ie lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -120,7 +120,7 @@
 		                                            <span></span>
 		                                        </td>
 		                                        <td>
-		                                            <i class="cta">click to add synopsis</i>
+		                                            <i class="cta">click to log tasks</i>
 		                                        </td>
 		                                    </tr>
 
